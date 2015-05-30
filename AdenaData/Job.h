@@ -13,7 +13,11 @@
 @property (nonatomic, strong) NSString *jobTitle;
 @property (nonatomic, strong) NSString *jobEmployer;
 @property (nonatomic, strong) NSString *jobLocation;
+@property (nonatomic, strong) NSString *jobLink;
 @property (nonatomic, strong) NSDate *jobDate;
+@property (nonatomic, copy) NSString *positionDetails;
+@property (nonatomic, copy) NSString *requirements;
+
 
 
 @end

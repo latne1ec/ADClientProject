@@ -124,9 +124,9 @@
         
         else {
             
-            [ProgressHUD dismiss];
             self.newsArticles = objects;
             [self.tableView reloadData];
+            [ProgressHUD dismiss];
         }
         
         if ([self.refreshControl isRefreshing]) {

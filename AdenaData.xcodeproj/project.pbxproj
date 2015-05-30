@@ -64,6 +64,16 @@
 		201703FE1B0F6C57004E280E /* adThumbnail.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 201703FD1B0F6C57004E280E /* adThumbnail.jpeg */; };
 		203A1B791B16061700E0D132 /* cancelWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 203A1B781B16061700E0D132 /* cancelWhite@2x.png */; };
 		203A1B7B1B16072C00E0D132 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 203A1B7A1B16072C00E0D132 /* cancel@2x.png */; };
+		20886C811B1618CF0046FB59 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C701B1618CF0046FB59 /* AbstractActionSheetPicker.m */; };
+		20886C821B1618CF0046FB59 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C721B1618CF0046FB59 /* ActionSheetCustomPicker.m */; };
+		20886C831B1618CF0046FB59 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C751B1618CF0046FB59 /* ActionSheetDatePicker.m */; };
+		20886C841B1618CF0046FB59 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C771B1618CF0046FB59 /* ActionSheetDistancePicker.m */; };
+		20886C851B1618CF0046FB59 /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C791B1618CF0046FB59 /* ActionSheetLocalePicker.m */; };
+		20886C861B1618CF0046FB59 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C7C1B1618CF0046FB59 /* ActionSheetStringPicker.m */; };
+		20886C871B1618CF0046FB59 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C7E1B1618CF0046FB59 /* DistancePickerView.m */; };
+		20886C881B1618CF0046FB59 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C801B1618CF0046FB59 /* SWActionSheet.m */; };
+		20886C8B1B163B2D0046FB59 /* JobDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C8A1B163B2D0046FB59 /* JobDetailTableViewController.m */; };
+		20886C8F1B1670D50046FB59 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C8E1B1670D50046FB59 /* UIScrollView+EmptyDataSet.m */; };
 		20EEEFC71B155B6C007EF98D /* jobs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20EEEFC61B155B6C007EF98D /* jobs@2x.png */; };
 		20EEEFCE1B155E85007EF98D /* JobsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEEFCD1B155E85007EF98D /* JobsTableCell.m */; };
 		20EEEFD01B156591007EF98D /* searchBarBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20EEEFCF1B156591007EF98D /* searchBarBkg@2x.png */; };
@@ -164,6 +174,28 @@
 		201703FD1B0F6C57004E280E /* adThumbnail.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adThumbnail.jpeg; sourceTree = "<group>"; };
 		203A1B781B16061700E0D132 /* cancelWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelWhite@2x.png"; sourceTree = "<group>"; };
 		203A1B7A1B16072C00E0D132 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		20886C6F1B1618CF0046FB59 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		20886C701B1618CF0046FB59 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		20886C711B1618CF0046FB59 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		20886C721B1618CF0046FB59 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		20886C731B1618CF0046FB59 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		20886C741B1618CF0046FB59 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		20886C751B1618CF0046FB59 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		20886C761B1618CF0046FB59 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		20886C771B1618CF0046FB59 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		20886C781B1618CF0046FB59 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		20886C791B1618CF0046FB59 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		20886C7A1B1618CF0046FB59 /* ActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPicker.h; sourceTree = "<group>"; };
+		20886C7B1B1618CF0046FB59 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		20886C7C1B1618CF0046FB59 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		20886C7D1B1618CF0046FB59 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
+		20886C7E1B1618CF0046FB59 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		20886C7F1B1618CF0046FB59 /* SWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
+		20886C801B1618CF0046FB59 /* SWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		20886C891B163B2D0046FB59 /* JobDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobDetailTableViewController.h; sourceTree = "<group>"; };
+		20886C8A1B163B2D0046FB59 /* JobDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobDetailTableViewController.m; sourceTree = "<group>"; };
+		20886C8D1B1670D50046FB59 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		20886C8E1B1670D50046FB59 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		20EEEFC61B155B6C007EF98D /* jobs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jobs@2x.png"; sourceTree = "<group>"; };
 		20EEEFCC1B155E85007EF98D /* JobsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsTableCell.h; sourceTree = "<group>"; };
 		20EEEFCD1B155E85007EF98D /* JobsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsTableCell.m; sourceTree = "<group>"; };
@@ -344,6 +376,8 @@
 		201703931B0E4B2E004E280E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				20886C8C1B1670D50046FB59 /* Source */,
+				20886C6E1B1618CF0046FB59 /* Pickers */,
 				201703CA1B0E5BAF004E280E /* DateTools */,
 				201703B31B0E5A43004E280E /* ProgressHUD */,
 			);
@@ -408,6 +442,40 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		20886C6E1B1618CF0046FB59 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				20886C6F1B1618CF0046FB59 /* AbstractActionSheetPicker.h */,
+				20886C701B1618CF0046FB59 /* AbstractActionSheetPicker.m */,
+				20886C711B1618CF0046FB59 /* ActionSheetCustomPicker.h */,
+				20886C721B1618CF0046FB59 /* ActionSheetCustomPicker.m */,
+				20886C731B1618CF0046FB59 /* ActionSheetCustomPickerDelegate.h */,
+				20886C741B1618CF0046FB59 /* ActionSheetDatePicker.h */,
+				20886C751B1618CF0046FB59 /* ActionSheetDatePicker.m */,
+				20886C761B1618CF0046FB59 /* ActionSheetDistancePicker.h */,
+				20886C771B1618CF0046FB59 /* ActionSheetDistancePicker.m */,
+				20886C781B1618CF0046FB59 /* ActionSheetLocalePicker.h */,
+				20886C791B1618CF0046FB59 /* ActionSheetLocalePicker.m */,
+				20886C7A1B1618CF0046FB59 /* ActionSheetPicker.h */,
+				20886C7B1B1618CF0046FB59 /* ActionSheetStringPicker.h */,
+				20886C7C1B1618CF0046FB59 /* ActionSheetStringPicker.m */,
+				20886C7D1B1618CF0046FB59 /* DistancePickerView.h */,
+				20886C7E1B1618CF0046FB59 /* DistancePickerView.m */,
+				20886C7F1B1618CF0046FB59 /* SWActionSheet.h */,
+				20886C801B1618CF0046FB59 /* SWActionSheet.m */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		20886C8C1B1670D50046FB59 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				20886C8D1B1670D50046FB59 /* UIScrollView+EmptyDataSet.h */,
+				20886C8E1B1670D50046FB59 /* UIScrollView+EmptyDataSet.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		20EEEFCB1B155DED007EF98D /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +489,8 @@
 				20EEEFD81B157EC2007EF98D /* FiltersTableViewController.m */,
 				20EEEFD11B15732D007EF98D /* SearchResultsTableViewController.h */,
 				20EEEFD21B15732D007EF98D /* SearchResultsTableViewController.m */,
+				20886C891B163B2D0046FB59 /* JobDetailTableViewController.h */,
+				20886C8A1B163B2D0046FB59 /* JobDetailTableViewController.m */,
 			);
 			name = Jobs;
 			sourceTree = "<group>";
@@ -550,20 +620,30 @@
 				20EEEFCE1B155E85007EF98D /* JobsTableCell.m in Sources */,
 				201703981B0E4B40004E280E /* ProgressHUD.m in Sources */,
 				201703C81B0E5BAB004E280E /* DTTimePeriodGroup.m in Sources */,
+				20886C851B1618CF0046FB59 /* ActionSheetLocalePicker.m in Sources */,
 				201703C61B0E5BAB004E280E /* DTTimePeriodChain.m in Sources */,
+				20886C821B1618CF0046FB59 /* ActionSheetCustomPicker.m in Sources */,
 				201703831B0E4824004E280E /* NewsTableViewController.m in Sources */,
 				2017033B1B0E4429004E280E /* AppDelegate.m in Sources */,
 				201703C51B0E5BAB004E280E /* DTTimePeriod.m in Sources */,
 				201703CD1B0E63B9004E280E /* Event.m in Sources */,
 				201703C91B0E5BAB004E280E /* NSDate+DateTools.m in Sources */,
 				2017039B1B0E502F004E280E /* NewsArticle.m in Sources */,
+				20886C8B1B163B2D0046FB59 /* JobDetailTableViewController.m in Sources */,
 				20EEEFD31B15732D007EF98D /* SearchResultsTableViewController.m in Sources */,
 				20EEEFD61B1576FC007EF98D /* Job.m in Sources */,
+				20886C861B1618CF0046FB59 /* ActionSheetStringPicker.m in Sources */,
 				2017038F1B0E4902004E280E /* EventsTableCell.m in Sources */,
+				20886C811B1618CF0046FB59 /* AbstractActionSheetPicker.m in Sources */,
 				201703381B0E4429004E280E /* main.m in Sources */,
+				20886C841B1618CF0046FB59 /* ActionSheetDistancePicker.m in Sources */,
+				20886C8F1B1670D50046FB59 /* UIScrollView+EmptyDataSet.m in Sources */,
+				20886C881B1618CF0046FB59 /* SWActionSheet.m in Sources */,
+				20886C871B1618CF0046FB59 /* DistancePickerView.m in Sources */,
 				201703C41B0E5BAB004E280E /* DTError.m in Sources */,
 				201703C71B0E5BAB004E280E /* DTTimePeriodCollection.m in Sources */,
 				201703921B0E4A83004E280E /* NewsDetailViewController.m in Sources */,
+				20886C831B1618CF0046FB59 /* ActionSheetDatePicker.m in Sources */,
 				201703E61B0E861A004E280E /* EventDetailTableViewController.m in Sources */,
 				2017038C1B0E48EF004E280E /* NewsTableCell.m in Sources */,
 				201703881B0E4853004E280E /* EventsTableViewController.m in Sources */,

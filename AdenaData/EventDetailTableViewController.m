@@ -32,7 +32,7 @@
     [eventImage loadInBackground];
     
     self.tableView.tableFooterView = [UIView new];
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.957 green:0.957 blue:0.957 alpha:1];
+    //self.tableView.backgroundColor = [UIColor colorWithRed:0.957 green:0.957 blue:0.957 alpha:1];
     
 }
 
@@ -54,9 +54,33 @@
     
     if (indexPath.row == 0) return imageCell;
     if (indexPath.row == 1) return eventDateCell;
+    
+    if (indexPath.row == 2) {
+        eventDescriptionCell.separatorInset = UIEdgeInsetsMake(0.f, 10000.0f, 0.f, 0.0f);
+    }
+    
+    
     if (indexPath.row == 2) return eventDescriptionCell;
     
     return nil;
 }
 
+- (IBAction)shareButtonTapped:(id)sender {
+    
+    NSString *finalString = [NSString stringWithFormat:@"%@ at %@", event.title, event.date];
+    NSURL *URL = [NSURL URLWithString:self.eventLink.text];
+        
+    UIActivityViewController *activityViewController =
+    [[UIActivityViewController alloc] initWithActivityItems:@[finalString, URL]
+                                      applicationActivities:nil];
+    
+    [self.navigationController presentViewController:activityViewController
+                                            animated:YES
+                                          completion:^{
+                                              
+                                          }];
+
+    
+    
+}
 @end

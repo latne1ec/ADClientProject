@@ -29,10 +29,8 @@
         [self.webview loadRequest:request];
         
     });
-
     
     self.webview.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
-    
     
 }
 

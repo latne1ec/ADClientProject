@@ -21,8 +21,9 @@
 @property (weak, nonatomic) IBOutlet PFImageView *eventImage;
 @property (weak, nonatomic) IBOutlet UILabel *eventDate;
 @property (weak, nonatomic) IBOutlet UITextView *eventDescription;
-
-
 @property (weak, nonatomic) IBOutlet UITextView *eventLink;
+
+
+- (IBAction)shareButtonTapped:(id)sender;
 
 @end

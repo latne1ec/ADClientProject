@@ -48,6 +48,7 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    [tap setCancelsTouchesInView:NO];
     
     self.jobTitleTextField.delegate = self;
     self.jobLocationTextView.delegate = self;
@@ -64,8 +65,15 @@
     
     [self.jobTitleTextField resignFirstResponder];
     [self.jobLocationTextView resignFirstResponder];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
+    [self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
     
 }
+
 
 
 
@@ -143,7 +151,7 @@
     
     [ProgressHUD show:nil];
     PFQuery *query = [PFQuery queryWithClassName:@"Jobs"];
-    [query orderByAscending:@"createdAt"];
+    [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         if (error) {
@@ -186,22 +194,57 @@
     UINavigationController *navigationController =
     [[UINavigationController alloc] initWithRootViewController:destViewController];
     
+    UIBarButtonItem *newBackButton =
+    [[UIBarButtonItem alloc] initWithTitle:@""
+                                     style:UIBarButtonItemStyleBordered
+                                    target:nil
+                                    action:nil];
+    [[navigationController navigationItem] setBackBarButtonItem:newBackButton];
+    
     
     [self.navigationController presentViewController:navigationController animated:YES completion:^{
        
-        NSLog(@"Presented");
     }];
     
 }
 
 - (IBAction)searchButtonTapped:(id)sender {
     
+    NSString *jobTitle = [self.jobTitleTextField.text stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *jobLocation = [self.jobLocationTextView.text stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
     SearchResultsTableViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResults"];
     
-    destViewController.jobTitle = self.jobTitleTextField.text;
-    destViewController.jobLocation = self.jobLocationTextView.text;
+    destViewController.jobTitle = jobTitle;
+    destViewController.jobLocation = jobLocation;
+    destViewController.hidesBottomBarWhenPushed = YES;
+
     [self.navigationController pushViewController:destViewController animated:YES];
     
+    
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"showDetailFromJobsTab"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow]; JobDetailTableViewController *destViewController = segue.destinationViewController;
+        
+        PFObject *object = [self.jobs objectAtIndex:indexPath.row];
+        Job *job = [[Job alloc] init];
+        job.jobTitle = [object objectForKey:@"jobTitle"];
+        job.jobLocation = [object objectForKey:@"jobLocation"];
+        job.jobEmployer = [object objectForKey:@"jobEmployer"];
+        job.jobDate = object.createdAt;
+        job.jobLink = [object objectForKey:@"jobLink"];
+        job.positionDetails = [object objectForKey:@"positionDetails"];
+        job.requirements = [object objectForKey:@"jobRequirements"];
+        destViewController.job = job;
+        
+        [segue.destinationViewController setTitle:job.jobTitle];
+        destViewController.hidesBottomBarWhenPushed = YES;
+        
+    }
+}
+
 
 @end

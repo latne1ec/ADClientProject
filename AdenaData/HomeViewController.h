@@ -12,4 +12,8 @@
 @interface HomeViewController : UIViewController <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 
+- (IBAction)reloadPage:(id)sender;
+
+
+
 @end

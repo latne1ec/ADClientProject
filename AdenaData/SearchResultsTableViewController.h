@@ -12,12 +12,22 @@
 #import "ProgressHUD.h"
 #import "DateTools.h"
 #import "Job.h"
+#import "JobDetailTableViewController.h"
 
 
-@interface SearchResultsTableViewController : UITableViewController
+@interface SearchResultsTableViewController : UITableViewController <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) Job *job;
 @property (nonatomic, copy) NSString *jobTitle;
 @property (nonatomic, copy) NSString *jobLocation;
+@property (nonatomic, copy) NSString *jobLink;
+
+
+@property (nonatomic, copy) NSString *filterQuery;
+@property (nonatomic, copy) NSString *positionType;
+@property (nonatomic, copy) NSString *employmentType;
+@property (nonatomic, copy) NSString *educationRequirements;
+
+
 
 @end

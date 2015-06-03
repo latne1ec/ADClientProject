@@ -10,6 +10,8 @@
 	<string>AdenaData</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>A6E494E0CCA82411D3E13BC3EE8C39D5B4C2BE48</key>
+		<string>https://github.com/jivadevoe/UIAlertView-Blocks.git</string>
 		<key>D1F187D7BA64E701EF69C6EE57E151099542784E</key>
 		<string>https://github.com/latne1ec/ADClientProject.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>AdenaData.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>A6E494E0CCA82411D3E13BC3EE8C39D5B4C2BE48</key>
+		<string>../../AdenaData/UIAlertView-Blocks</string>
 		<key>D1F187D7BA64E701EF69C6EE57E151099542784E</key>
 		<string>../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>D1F187D7BA64E701EF69C6EE57E151099542784E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AdenaData</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A6E494E0CCA82411D3E13BC3EE8C39D5B4C2BE48</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UIAlertView-Blocks</string>
 		</dict>
 	</array>
 </dict>

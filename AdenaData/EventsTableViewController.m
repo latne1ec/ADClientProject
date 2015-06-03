@@ -61,8 +61,6 @@
     cell.tableCellFade.layer.cornerRadius = 3;
     cell.tableCellFade.clipsToBounds = YES;
 
-    
-    
     cell.title.text = [object objectForKey:@"eventName"];
     cell.eventDate.text = [object objectForKey:@"eventDate"];
     

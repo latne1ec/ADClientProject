@@ -452,6 +452,46 @@
             </objects>
             <point key="canvasLocation" x="527" y="757"/>
         </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="30G-bN-9Jz">
+            <objects>
+                <viewController storyboardIdentifier="PushWebview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Ft-KC-wt9" customClass="NotificationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xzt-qD-Qft"/>
+                        <viewControllerLayoutGuide type="bottom" id="XIp-wM-RG3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fwc-pF-29L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Je-9x-NES">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Je-9x-NES" firstAttribute="bottom" secondItem="XIp-wM-RG3" secondAttribute="top" id="XRN-Fv-U9S"/>
+                            <constraint firstItem="9Je-9x-NES" firstAttribute="leading" secondItem="Fwc-pF-29L" secondAttribute="leading" id="Xi8-3w-6KN"/>
+                            <constraint firstAttribute="trailing" secondItem="9Je-9x-NES" secondAttribute="trailing" id="pOo-Sz-AKk"/>
+                            <constraint firstItem="9Je-9x-NES" firstAttribute="top" secondItem="Fwc-pF-29L" secondAttribute="top" id="tnQ-AW-7s9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6iT-fo-YnC">
+                        <barButtonItem key="leftBarButtonItem" image="cancel.png" id="Js4-zH-Bxk">
+                            <connections>
+                                <action selector="popHome:" destination="4Ft-KC-wt9" id="bUq-nl-YL2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webview" destination="9Je-9x-NES" id="XuB-pH-Pqf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HxQ-qC-lx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2324" y="1043"/>
+        </scene>
         <!--Filters Table View Controller-->
         <scene sceneID="wxq-cE-r2C">
             <objects>
@@ -944,10 +984,29 @@ Excellent communication skills. </string>
             </objects>
             <point key="canvasLocation" x="527" y="1437"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SHM-Nd-KXa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WFi-l5-vvs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cbg-GT-xXE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Ft-KC-wt9" kind="relationship" relationship="rootViewController" id="FXf-F8-tnh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdX-dg-V5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="1043"/>
+        </scene>
     </scenes>
     <resources>
         <image name="TableCellFade.png" width="640" height="276"/>
         <image name="calendar.png" width="40" height="44"/>
+        <image name="cancel.png" width="27" height="27"/>
         <image name="event.png" width="29" height="29"/>
         <image name="home.png" width="29" height="29"/>
         <image name="info.png" width="40" height="44"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200FE97B1B1CA9FF00B87640 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 200FE97A1B1CA9FF00B87640 /* NotificationViewController.m */; };
 		201703381B0E4429004E280E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 201703371B0E4429004E280E /* main.m */; };
 		2017033B1B0E4429004E280E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2017033A1B0E4429004E280E /* AppDelegate.m */; };
 		201703411B0E4429004E280E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017033F1B0E4429004E280E /* Main.storyboard */; };
@@ -74,6 +75,12 @@
 		20886C881B1618CF0046FB59 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C801B1618CF0046FB59 /* SWActionSheet.m */; };
 		20886C8B1B163B2D0046FB59 /* JobDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C8A1B163B2D0046FB59 /* JobDetailTableViewController.m */; };
 		20886C8F1B1670D50046FB59 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C8E1B1670D50046FB59 /* UIScrollView+EmptyDataSet.m */; };
+		2090276B1B1D14DF003637F0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 209027621B1D14DF003637F0 /* LICENSE */; };
+		2090276C1B1D14DF003637F0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 209027631B1D14DF003637F0 /* README.md */; };
+		2090276D1B1D14DF003637F0 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 209027651B1D14DF003637F0 /* RIButtonItem.m */; };
+		2090276E1B1D14DF003637F0 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 209027671B1D14DF003637F0 /* UIActionSheet+Blocks.m */; };
+		2090276F1B1D14DF003637F0 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 209027691B1D14DF003637F0 /* UIAlertView+Blocks.m */; };
+		209027701B1D14DF003637F0 /* UIAlertView-Blocks.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2090276A1B1D14DF003637F0 /* UIAlertView-Blocks.podspec */; };
 		20EEEFC71B155B6C007EF98D /* jobs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20EEEFC61B155B6C007EF98D /* jobs@2x.png */; };
 		20EEEFCE1B155E85007EF98D /* JobsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEEFCD1B155E85007EF98D /* JobsTableCell.m */; };
 		20EEEFD01B156591007EF98D /* searchBarBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20EEEFCF1B156591007EF98D /* searchBarBkg@2x.png */; };
@@ -94,6 +101,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		200FE9791B1CA9FF00B87640 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
+		200FE97A1B1CA9FF00B87640 /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 		201703321B0E4429004E280E /* AdenaData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdenaData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201703361B0E4429004E280E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201703371B0E4429004E280E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -196,6 +205,15 @@
 		20886C8A1B163B2D0046FB59 /* JobDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobDetailTableViewController.m; sourceTree = "<group>"; };
 		20886C8D1B1670D50046FB59 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		20886C8E1B1670D50046FB59 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		209027621B1D14DF003637F0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		209027631B1D14DF003637F0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		209027641B1D14DF003637F0 /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
+		209027651B1D14DF003637F0 /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIButtonItem.m; sourceTree = "<group>"; };
+		209027661B1D14DF003637F0 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		209027671B1D14DF003637F0 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		209027681B1D14DF003637F0 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		209027691B1D14DF003637F0 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		2090276A1B1D14DF003637F0 /* UIAlertView-Blocks.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIAlertView-Blocks.podspec"; sourceTree = "<group>"; };
 		20EEEFC61B155B6C007EF98D /* jobs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jobs@2x.png"; sourceTree = "<group>"; };
 		20EEEFCC1B155E85007EF98D /* JobsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsTableCell.h; sourceTree = "<group>"; };
 		20EEEFCD1B155E85007EF98D /* JobsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsTableCell.m; sourceTree = "<group>"; };
@@ -245,6 +263,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		200FE97C1B1CAA3500B87640 /* Push Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				200FE9791B1CA9FF00B87640 /* NotificationViewController.h */,
+				200FE97A1B1CA9FF00B87640 /* NotificationViewController.m */,
+			);
+			name = "Push Notifications";
+			sourceTree = "<group>";
+		};
 		201703291B0E4429004E280E = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +302,7 @@
 				201703841B0E4833004E280E /* News */,
 				201703891B0E4855004E280E /* Events */,
 				20EEEFCB1B155DED007EF98D /* Jobs */,
+				200FE97C1B1CAA3500B87640 /* Push Notifications */,
 				201703421B0E4429004E280E /* Images.xcassets */,
 				201703441B0E4429004E280E /* LaunchScreen.xib */,
 				201703351B0E4429004E280E /* Supporting Files */,
@@ -376,6 +404,7 @@
 		201703931B0E4B2E004E280E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				209027611B1D14DF003637F0 /* UIAlertView-Blocks */,
 				20886C8C1B1670D50046FB59 /* Source */,
 				20886C6E1B1618CF0046FB59 /* Pickers */,
 				201703CA1B0E5BAF004E280E /* DateTools */,
@@ -476,6 +505,22 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		209027611B1D14DF003637F0 /* UIAlertView-Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				209027621B1D14DF003637F0 /* LICENSE */,
+				209027631B1D14DF003637F0 /* README.md */,
+				209027641B1D14DF003637F0 /* RIButtonItem.h */,
+				209027651B1D14DF003637F0 /* RIButtonItem.m */,
+				209027661B1D14DF003637F0 /* UIActionSheet+Blocks.h */,
+				209027671B1D14DF003637F0 /* UIActionSheet+Blocks.m */,
+				209027681B1D14DF003637F0 /* UIAlertView+Blocks.h */,
+				209027691B1D14DF003637F0 /* UIAlertView+Blocks.m */,
+				2090276A1B1D14DF003637F0 /* UIAlertView-Blocks.podspec */,
+			);
+			path = "UIAlertView-Blocks";
+			sourceTree = "<group>";
+		};
 		20EEEFCB1B155DED007EF98D /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +589,7 @@
 				TargetAttributes = {
 					201703311B0E4429004E280E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = H875PU7D8W;
 					};
 					2017034A1B0E4429004E280E = {
 						CreatedOnToolsVersion = 6.2;
@@ -579,6 +625,7 @@
 				203A1B7B1B16072C00E0D132 /* cancel@2x.png in Resources */,
 				201703971B0E4B40004E280E /* ProgressHUD.bundle in Resources */,
 				201703E11B0E7712004E280E /* news@2x.png in Resources */,
+				209027701B1D14DF003637F0 /* UIAlertView-Blocks.podspec in Resources */,
 				201703411B0E4429004E280E /* Main.storyboard in Resources */,
 				201703EA1B0EA590004E280E /* calendar@2x.png in Resources */,
 				201703D21B0E6665004E280E /* TableCellFade.png in Resources */,
@@ -593,6 +640,7 @@
 				201703E31B0E783D004E280E /* home@2x.png in Resources */,
 				201703D01B0E654E004E280E /* orangeBar@2x.png in Resources */,
 				203A1B791B16061700E0D132 /* cancelWhite@2x.png in Resources */,
+				2090276B1B1D14DF003637F0 /* LICENSE in Resources */,
 				201703461B0E4429004E280E /* LaunchScreen.xib in Resources */,
 				201703431B0E4429004E280E /* Images.xcassets in Resources */,
 				201703F41B0EAF03004E280E /* adenaDataSmall@2x.png in Resources */,
@@ -632,16 +680,21 @@
 				20886C8B1B163B2D0046FB59 /* JobDetailTableViewController.m in Sources */,
 				20EEEFD31B15732D007EF98D /* SearchResultsTableViewController.m in Sources */,
 				20EEEFD61B1576FC007EF98D /* Job.m in Sources */,
+				2090276C1B1D14DF003637F0 /* README.md in Sources */,
 				20886C861B1618CF0046FB59 /* ActionSheetStringPicker.m in Sources */,
 				2017038F1B0E4902004E280E /* EventsTableCell.m in Sources */,
+				200FE97B1B1CA9FF00B87640 /* NotificationViewController.m in Sources */,
+				2090276E1B1D14DF003637F0 /* UIActionSheet+Blocks.m in Sources */,
 				20886C811B1618CF0046FB59 /* AbstractActionSheetPicker.m in Sources */,
 				201703381B0E4429004E280E /* main.m in Sources */,
 				20886C841B1618CF0046FB59 /* ActionSheetDistancePicker.m in Sources */,
 				20886C8F1B1670D50046FB59 /* UIScrollView+EmptyDataSet.m in Sources */,
 				20886C881B1618CF0046FB59 /* SWActionSheet.m in Sources */,
 				20886C871B1618CF0046FB59 /* DistancePickerView.m in Sources */,
+				2090276D1B1D14DF003637F0 /* RIButtonItem.m in Sources */,
 				201703C41B0E5BAB004E280E /* DTError.m in Sources */,
 				201703C71B0E5BAB004E280E /* DTTimePeriodCollection.m in Sources */,
+				2090276F1B1D14DF003637F0 /* UIAlertView+Blocks.m in Sources */,
 				201703921B0E4A83004E280E /* NewsDetailViewController.m in Sources */,
 				20886C831B1618CF0046FB59 /* ActionSheetDatePicker.m in Sources */,
 				201703E61B0E861A004E280E /* EventDetailTableViewController.m in Sources */,
@@ -706,7 +759,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -726,6 +780,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "af2906f3-aaec-4944-9b26-a720c99d5531";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -747,7 +802,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -760,6 +816,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "af2906f3-aaec-4944-9b26-a720c99d5531";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -769,6 +826,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdenaData",
@@ -777,6 +836,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "af2906f3-aaec-4944-9b26-a720c99d5531";
 			};
 			name = Debug;
 		};
@@ -784,6 +844,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdenaData",
@@ -792,6 +854,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "af2906f3-aaec-4944-9b26-a720c99d5531";
 			};
 			name = Release;
 		};

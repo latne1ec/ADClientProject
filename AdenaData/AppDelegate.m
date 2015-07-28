@@ -28,9 +28,9 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [PFImageView class];
     
-    [[UINavigationBar appearance] setTintColor:UIColorFromRGB(0xfe5607)];
-    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.98 green:0.443 blue:0.259 alpha:1]];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.937 green:0.416 blue:0.231 alpha:1]];
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:0.98 green:0.443 blue:0.259 alpha:1]];
 
     NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowColor = [UIColor clearColor];
@@ -48,8 +48,6 @@
                                                                              categories:nil];
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
-    
-    
     
     return YES;
 }

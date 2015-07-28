@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		200FE97B1B1CA9FF00B87640 /* NotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 200FE97A1B1CA9FF00B87640 /* NotificationViewController.m */; };
+		201186161B419AF400A59D55 /* adBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201186151B419AF400A59D55 /* adBkg@2x.png */; };
 		201703381B0E4429004E280E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 201703371B0E4429004E280E /* main.m */; };
 		2017033B1B0E4429004E280E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2017033A1B0E4429004E280E /* AppDelegate.m */; };
 		201703411B0E4429004E280E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017033F1B0E4429004E280E /* Main.storyboard */; };
@@ -65,6 +66,19 @@
 		201703FE1B0F6C57004E280E /* adThumbnail.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 201703FD1B0F6C57004E280E /* adThumbnail.jpeg */; };
 		203A1B791B16061700E0D132 /* cancelWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 203A1B781B16061700E0D132 /* cancelWhite@2x.png */; };
 		203A1B7B1B16072C00E0D132 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 203A1B7A1B16072C00E0D132 /* cancel@2x.png */; };
+		20497DE81B6552D6004A2950 /* addPost@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497DE71B6552D6004A2950 /* addPost@2x.png */; };
+		20790A531B571C870045481A /* ForumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20790A521B571C870045481A /* ForumTableViewController.m */; };
+		20790A571B571CB50045481A /* ForumTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20790A561B571CB50045481A /* ForumTableCell.m */; };
+		20790A611B571F1D0045481A /* adLogo2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20790A601B571F1D0045481A /* adLogo2@2x.png */; };
+		20790A661B571FC20045481A /* AddPostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20790A651B571FC20045481A /* AddPostTableViewController.m */; };
+		20790A691B5724430045481A /* addPhoto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20790A681B5724430045481A /* addPhoto@2x.png */; };
+		20790A6C1B57375B0045481A /* JGActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 20790A6B1B57375B0045481A /* JGActionSheet.m */; };
+		20790A6F1B5749F40045481A /* addPostTwo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20790A6E1B5749F40045481A /* addPostTwo@2x.png */; };
+		20790A721B57F1890045481A /* PostDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20790A711B57F1890045481A /* PostDetailTableViewController.m */; };
+		20790A741B57F9970045481A /* mapIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20790A731B57F9970045481A /* mapIcon@2x.png */; };
+		20790A761B58013E0045481A /* adBkg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20790A751B58013E0045481A /* adBkg2@2x.png */; };
+		20790A791B58019B0045481A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20790A781B58019B0045481A /* WelcomeViewController.m */; };
+		20790A7B1B5817540045481A /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20790A7A1B5817540045481A /* clock@2x.png */; };
 		20886C811B1618CF0046FB59 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C701B1618CF0046FB59 /* AbstractActionSheetPicker.m */; };
 		20886C821B1618CF0046FB59 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C721B1618CF0046FB59 /* ActionSheetCustomPicker.m */; };
 		20886C831B1618CF0046FB59 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886C751B1618CF0046FB59 /* ActionSheetDatePicker.m */; };
@@ -103,6 +117,7 @@
 /* Begin PBXFileReference section */
 		200FE9791B1CA9FF00B87640 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
 		200FE97A1B1CA9FF00B87640 /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
+		201186151B419AF400A59D55 /* adBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adBkg@2x.png"; sourceTree = "<group>"; };
 		201703321B0E4429004E280E /* AdenaData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdenaData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201703361B0E4429004E280E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201703371B0E4429004E280E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -183,6 +198,25 @@
 		201703FD1B0F6C57004E280E /* adThumbnail.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adThumbnail.jpeg; sourceTree = "<group>"; };
 		203A1B781B16061700E0D132 /* cancelWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelWhite@2x.png"; sourceTree = "<group>"; };
 		203A1B7A1B16072C00E0D132 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		20497DE71B6552D6004A2950 /* addPost@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addPost@2x.png"; sourceTree = "<group>"; };
+		20790A511B571C870045481A /* ForumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumTableViewController.h; sourceTree = "<group>"; };
+		20790A521B571C870045481A /* ForumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumTableViewController.m; sourceTree = "<group>"; };
+		20790A551B571CB50045481A /* ForumTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumTableCell.h; sourceTree = "<group>"; };
+		20790A561B571CB50045481A /* ForumTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumTableCell.m; sourceTree = "<group>"; };
+		20790A601B571F1D0045481A /* adLogo2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adLogo2@2x.png"; sourceTree = "<group>"; };
+		20790A641B571FC20045481A /* AddPostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPostTableViewController.h; sourceTree = "<group>"; };
+		20790A651B571FC20045481A /* AddPostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPostTableViewController.m; sourceTree = "<group>"; };
+		20790A681B5724430045481A /* addPhoto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addPhoto@2x.png"; sourceTree = "<group>"; };
+		20790A6A1B57375B0045481A /* JGActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGActionSheet.h; sourceTree = "<group>"; };
+		20790A6B1B57375B0045481A /* JGActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGActionSheet.m; sourceTree = "<group>"; };
+		20790A6E1B5749F40045481A /* addPostTwo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addPostTwo@2x.png"; sourceTree = "<group>"; };
+		20790A701B57F1890045481A /* PostDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostDetailTableViewController.h; path = AdenaData/PostDetailTableViewController.h; sourceTree = "<group>"; };
+		20790A711B57F1890045481A /* PostDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostDetailTableViewController.m; path = AdenaData/PostDetailTableViewController.m; sourceTree = "<group>"; };
+		20790A731B57F9970045481A /* mapIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapIcon@2x.png"; sourceTree = "<group>"; };
+		20790A751B58013E0045481A /* adBkg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adBkg2@2x.png"; sourceTree = "<group>"; };
+		20790A771B58019B0045481A /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		20790A781B58019B0045481A /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		20790A7A1B5817540045481A /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@2x.png"; sourceTree = "<group>"; };
 		20886C6F1B1618CF0046FB59 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
 		20886C701B1618CF0046FB59 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
 		20886C711B1618CF0046FB59 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
@@ -298,8 +332,12 @@
 				201703391B0E4429004E280E /* AppDelegate.h */,
 				2017033A1B0E4429004E280E /* AppDelegate.m */,
 				2017033F1B0E4429004E280E /* Main.storyboard */,
+				20790A771B58019B0045481A /* WelcomeViewController.h */,
+				20790A781B58019B0045481A /* WelcomeViewController.m */,
 				201703851B0E4839004E280E /* Home */,
 				201703841B0E4833004E280E /* News */,
+				20790A671B571FC70045481A /* Add Post */,
+				20790A541B571C8B0045481A /* Forum */,
 				201703891B0E4855004E280E /* Events */,
 				20EEEFCB1B155DED007EF98D /* Jobs */,
 				200FE97C1B1CAA3500B87640 /* Push Notifications */,
@@ -404,6 +442,7 @@
 		201703931B0E4B2E004E280E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				20790A6D1B5737600045481A /* JGActionSheet */,
 				209027611B1D14DF003637F0 /* UIAlertView-Blocks */,
 				20886C8C1B1670D50046FB59 /* Source */,
 				20886C6E1B1618CF0046FB59 /* Pickers */,
@@ -449,6 +488,14 @@
 		201703CE1B0E6542004E280E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				20497DE71B6552D6004A2950 /* addPost@2x.png */,
+				20790A7A1B5817540045481A /* clock@2x.png */,
+				20790A751B58013E0045481A /* adBkg2@2x.png */,
+				20790A731B57F9970045481A /* mapIcon@2x.png */,
+				20790A6E1B5749F40045481A /* addPostTwo@2x.png */,
+				20790A681B5724430045481A /* addPhoto@2x.png */,
+				20790A601B571F1D0045481A /* adLogo2@2x.png */,
+				201186151B419AF400A59D55 /* adBkg@2x.png */,
 				203A1B7A1B16072C00E0D132 /* cancel@2x.png */,
 				203A1B781B16061700E0D132 /* cancelWhite@2x.png */,
 				20EEEFCF1B156591007EF98D /* searchBarBkg@2x.png */,
@@ -469,6 +516,38 @@
 				201703CF1B0E654E004E280E /* orangeBar@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		20790A541B571C8B0045481A /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				20790A551B571CB50045481A /* ForumTableCell.h */,
+				20790A561B571CB50045481A /* ForumTableCell.m */,
+				20790A511B571C870045481A /* ForumTableViewController.h */,
+				20790A521B571C870045481A /* ForumTableViewController.m */,
+			);
+			name = Forum;
+			sourceTree = "<group>";
+		};
+		20790A671B571FC70045481A /* Add Post */ = {
+			isa = PBXGroup;
+			children = (
+				20790A641B571FC20045481A /* AddPostTableViewController.h */,
+				20790A651B571FC20045481A /* AddPostTableViewController.m */,
+				20790A701B57F1890045481A /* PostDetailTableViewController.h */,
+				20790A711B57F1890045481A /* PostDetailTableViewController.m */,
+			);
+			name = "Add Post";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		20790A6D1B5737600045481A /* JGActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				20790A6A1B57375B0045481A /* JGActionSheet.h */,
+				20790A6B1B57375B0045481A /* JGActionSheet.m */,
+			);
+			name = JGActionSheet;
 			sourceTree = "<group>";
 		};
 		20886C6E1B1618CF0046FB59 /* Pickers */ = {
@@ -625,8 +704,10 @@
 				203A1B7B1B16072C00E0D132 /* cancel@2x.png in Resources */,
 				201703971B0E4B40004E280E /* ProgressHUD.bundle in Resources */,
 				201703E11B0E7712004E280E /* news@2x.png in Resources */,
+				20790A691B5724430045481A /* addPhoto@2x.png in Resources */,
 				209027701B1D14DF003637F0 /* UIAlertView-Blocks.podspec in Resources */,
 				201703411B0E4429004E280E /* Main.storyboard in Resources */,
+				20497DE81B6552D6004A2950 /* addPost@2x.png in Resources */,
 				201703EA1B0EA590004E280E /* calendar@2x.png in Resources */,
 				201703D21B0E6665004E280E /* TableCellFade.png in Resources */,
 				201703FE1B0F6C57004E280E /* adThumbnail.jpeg in Resources */,
@@ -636,15 +717,21 @@
 				201703F61B0EBE1D004E280E /* grayView@2x.png in Resources */,
 				201703FC1B0EC782004E280E /* photo-frame@2x.png in Resources */,
 				201703EE1B0EA73D004E280E /* link@2x.png in Resources */,
+				20790A611B571F1D0045481A /* adLogo2@2x.png in Resources */,
 				201703FB1B0EC782004E280E /* photo-frame.png in Resources */,
 				201703E31B0E783D004E280E /* home@2x.png in Resources */,
+				20790A741B57F9970045481A /* mapIcon@2x.png in Resources */,
+				20790A7B1B5817540045481A /* clock@2x.png in Resources */,
+				20790A761B58013E0045481A /* adBkg2@2x.png in Resources */,
 				201703D01B0E654E004E280E /* orangeBar@2x.png in Resources */,
 				203A1B791B16061700E0D132 /* cancelWhite@2x.png in Resources */,
 				2090276B1B1D14DF003637F0 /* LICENSE in Resources */,
+				20790A6F1B5749F40045481A /* addPostTwo@2x.png in Resources */,
 				201703461B0E4429004E280E /* LaunchScreen.xib in Resources */,
 				201703431B0E4429004E280E /* Images.xcassets in Resources */,
 				201703F41B0EAF03004E280E /* adenaDataSmall@2x.png in Resources */,
 				20EEEFC71B155B6C007EF98D /* jobs@2x.png in Resources */,
+				201186161B419AF400A59D55 /* adBkg@2x.png in Resources */,
 				201703C31B0E5BAB004E280E /* DateTools.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,10 +762,14 @@
 				2017033B1B0E4429004E280E /* AppDelegate.m in Sources */,
 				201703C51B0E5BAB004E280E /* DTTimePeriod.m in Sources */,
 				201703CD1B0E63B9004E280E /* Event.m in Sources */,
+				20790A571B571CB50045481A /* ForumTableCell.m in Sources */,
 				201703C91B0E5BAB004E280E /* NSDate+DateTools.m in Sources */,
+				20790A661B571FC20045481A /* AddPostTableViewController.m in Sources */,
 				2017039B1B0E502F004E280E /* NewsArticle.m in Sources */,
 				20886C8B1B163B2D0046FB59 /* JobDetailTableViewController.m in Sources */,
+				20790A791B58019B0045481A /* WelcomeViewController.m in Sources */,
 				20EEEFD31B15732D007EF98D /* SearchResultsTableViewController.m in Sources */,
+				20790A531B571C870045481A /* ForumTableViewController.m in Sources */,
 				20EEEFD61B1576FC007EF98D /* Job.m in Sources */,
 				2090276C1B1D14DF003637F0 /* README.md in Sources */,
 				20886C861B1618CF0046FB59 /* ActionSheetStringPicker.m in Sources */,
@@ -696,8 +787,10 @@
 				201703C71B0E5BAB004E280E /* DTTimePeriodCollection.m in Sources */,
 				2090276F1B1D14DF003637F0 /* UIAlertView+Blocks.m in Sources */,
 				201703921B0E4A83004E280E /* NewsDetailViewController.m in Sources */,
+				20790A6C1B57375B0045481A /* JGActionSheet.m in Sources */,
 				20886C831B1618CF0046FB59 /* ActionSheetDatePicker.m in Sources */,
 				201703E61B0E861A004E280E /* EventDetailTableViewController.m in Sources */,
+				20790A721B57F1890045481A /* PostDetailTableViewController.m in Sources */,
 				2017038C1B0E48EF004E280E /* NewsTableCell.m in Sources */,
 				201703881B0E4853004E280E /* EventsTableViewController.m in Sources */,
 				201703801B0E4808004E280E /* HomeViewController.m in Sources */,

@@ -14,6 +14,7 @@
 #import "NewsDetailViewController.h"
 #import <ParseUI/ParseUI.h>
 #import "DateTools.h"
+#import "AddPostTableViewController.h"
 
 @interface NewsTableViewController : UITableViewController
 
@@ -22,6 +23,7 @@
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 
+- (IBAction)addPostTapped:(id)sender;
 
 
 @end

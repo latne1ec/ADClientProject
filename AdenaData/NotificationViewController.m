@@ -17,8 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"View did Load");
-    
     [ProgressHUD show:nil];
     
     self.webview.delegate = self;

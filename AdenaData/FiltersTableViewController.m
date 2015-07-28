@@ -195,13 +195,10 @@
     return YES;
 }
 
-
-
 - (IBAction)searchButtonTapped:(id)sender {
     
     NSString *jobTitle = [self.jobTitleTextfield.text stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *jobLocation = [self.jobLocationTextField.text stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
     
     SearchResultsTableViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResults"];
     

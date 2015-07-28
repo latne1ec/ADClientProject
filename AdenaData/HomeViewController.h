@@ -12,6 +12,11 @@
 @interface HomeViewController : UIViewController <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 
+@property (weak, nonatomic) IBOutlet UIButton *visitWebsiteButton;
+
+- (IBAction)visitWebsiteTapped:(id)sender;
+
+
 - (IBAction)reloadPage:(id)sender;
 
 

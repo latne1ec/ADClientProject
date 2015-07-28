@@ -14,6 +14,7 @@
 
 @implementation HomeViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -23,6 +24,12 @@
     //Nav Bar Image
     UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"adenaDataSmall"]]];
     self.navigationItem.leftBarButtonItem = item;
+    
+    
+    CALayer *btn1 = [self.visitWebsiteButton layer];
+    [btn1 setMasksToBounds:YES];
+    [btn1 setCornerRadius:5.0f];
+
     
 }
 
@@ -48,6 +55,12 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [ProgressHUD dismiss];
+}
+
+- (IBAction)visitWebsiteTapped:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://adenadata.com"]];
+    
 }
 
 - (IBAction)reloadPage:(id)sender {

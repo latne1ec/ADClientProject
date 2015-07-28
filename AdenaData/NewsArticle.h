@@ -18,6 +18,12 @@
 @property (nonatomic, strong) NSString *url;
 
 
+@property (nonatomic, strong) NSString *location;
+@property (nonatomic, strong) PFFile *image;
+@property (nonatomic, strong) NSString *thePost;
+
+
+
 -(id)initWithTitle: (NSString *)title;
 +(id)blogPostWithTitle: (NSString *)title;
 

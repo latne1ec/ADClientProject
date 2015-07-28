@@ -10,6 +10,9 @@
 
 @interface NewsDetailViewController ()
 
+@property (nonatomic, strong) NSURLRequest *request;
+
+
 @end
 
 @implementation NewsDetailViewController
@@ -19,14 +22,15 @@
     
     [ProgressHUD show:nil];
     NSString *url = _articleUrl;
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    self.request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
     self.webview.delegate = self;
     self.webview.opaque = NO;
     
     dispatch_queue_t workerQueue = dispatch_queue_create("QueueIdentifier", NULL);
     dispatch_async(workerQueue, ^ {
         
-        [self.webview loadRequest:request];
+    [self.webview loadRequest:self.request];
         
     });
     
@@ -38,11 +42,19 @@
     
     [ProgressHUD dismiss];
     [self.webview stopLoading];
+    [NSURLConnection canHandleRequest:self.request];
     
 }
 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    if ([request.URL.scheme isEqualToString:@"cancel"]) {
+        return NO;
+    }
+    return YES;
+}
+
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    //[ProgressHUD showError:@"Network Error"];
+    [ProgressHUD showError:@"Network Error"];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {

@@ -31,7 +31,7 @@
                   forControlEvents:UIControlEventValueChanged];
     
     //Nav Bar Image
-    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"adenaDataSmall"]]];
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"adLogo2"]]];
     self.navigationItem.leftBarButtonItem = item;
     
     CALayer *btn1 = [self.searchButton layer];
@@ -190,20 +190,15 @@
 - (IBAction)moreFiltersTapped:(id)sender {
     
     FiltersTableViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Filters"];
-    
     UINavigationController *navigationController =
     [[UINavigationController alloc] initWithRootViewController:destViewController];
-    
     UIBarButtonItem *newBackButton =
     [[UIBarButtonItem alloc] initWithTitle:@""
                                      style:UIBarButtonItemStyleBordered
                                     target:nil
                                     action:nil];
     [[navigationController navigationItem] setBackBarButtonItem:newBackButton];
-    
-    
     [self.navigationController presentViewController:navigationController animated:YES completion:^{
-       
     }];
     
 }

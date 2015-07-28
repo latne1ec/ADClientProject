@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     [self queryForEvents];
-    
     self.refreshControl = [[UIRefreshControl alloc]init];
     [self.refreshControl addTarget:self action:@selector(queryForEvents)
                   forControlEvents:UIControlEventValueChanged];
@@ -34,12 +33,12 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
+    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
+  
     return self.events.count;
 }
 
@@ -97,7 +96,6 @@
 -(void)queryForEvents {
     
     [ProgressHUD show:nil];
-    
     PFQuery *query = [PFQuery queryWithClassName:@"Events"];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -106,7 +104,6 @@
             
             [ProgressHUD showError:@"Network Error"];
         }
-        
         else {
             [ProgressHUD dismiss];
             self.events = objects;

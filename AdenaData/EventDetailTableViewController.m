@@ -32,7 +32,6 @@
     [eventImage loadInBackground];
     
     self.tableView.tableFooterView = [UIView new];
-    //self.tableView.backgroundColor = [UIColor colorWithRed:0.957 green:0.957 blue:0.957 alpha:1];
     
 }
 
@@ -79,7 +78,6 @@
                                           completion:^{
                                               
                                           }];
-
     
     
 }

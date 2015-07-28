@@ -29,7 +29,6 @@
     self.jobPositionDetails.text = job.positionDetails;
     self.jobRequirements.text = job.requirements;
     
-
 }
 
 #pragma mark - Table view data source
@@ -58,7 +57,6 @@
 }
 
 - (IBAction)shareButtonTapped:(id)sender {
-
     
     NSString *finalString = [NSString stringWithFormat:@"%@ position at %@", self.job.jobTitle, self.job.jobEmployer];
     NSURL *URL = [NSURL URLWithString:self.job.jobLink];

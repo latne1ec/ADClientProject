@@ -44,8 +44,6 @@
             
         }
     }
-    
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -93,7 +91,6 @@
     return 82;
     
 }
-
 
 -(void)queryForJobListings {
     

@@ -20,19 +20,14 @@
         self.thumbnail = nil;
         
     }
-    
     return self;
-    
 }
-
 
 +(id) blogPostWithTitle:(NSString *)title {
     
     return [[self alloc] initWithTitle:title];
     
 }
-
-
 
 -(NSString *)formattedDate {
     
@@ -43,9 +38,5 @@
     return [formatter stringFromDate:tempDate];
     
 }
-
-
-
-
 
 @end

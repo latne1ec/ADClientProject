@@ -10,6 +10,9 @@
 #import "PostDetailTableViewController.h"
 #import "WelcomeViewController.h"
 #import "UIScrollView+EmptyDataSet.h"
+#import "CustomNavController.h"
+#import "AppDelegate.h"
+#import "TourViewController.h"
 
 
 @interface NewsTableViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
@@ -21,21 +24,46 @@
 
 @implementation NewsTableViewController
 
+@synthesize searchBar, posts;
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    appDelegate.adnowVC = self;
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     
     self.title = @"AD Now";
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
     
     
-    if (![PFUser currentUser]) {
-        
-        WelcomeViewController *wvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Welcome"];
-        [self.navigationController presentViewController:wvc animated:YES completion:^{
-           
-        }];
+//    if (![PFUser currentUser]) {
+//        
+//        WelcomeViewController *wvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Welcome"];
+//        [self.navigationController presentViewController:wvc animated:YES completion:^{
+//           
+//        }];
+//    }
+    
+    
+    
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"hasRanApp"] isEqualToString:@"yes"]) {
+        NSLog(@"HAS RAN APP");
     }
+    else {
+        NSLog(@"NOT RAN ");
+        TourViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Tour"];
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+        //tvc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:tvc animated:NO];
+        //[self.tabBarController setHidesBottomBarWhenPushed:YES];
+        [self.tabBarController.tabBar setHidden:YES];
+    }
+    
     
     [self queryForNewsArticles];
     self.refreshControl = [[UIRefreshControl alloc]init];
@@ -47,14 +75,38 @@
     UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"adenaDataSmall"]]];
     self.navigationItem.leftBarButtonItem = item;
     
-
+    [self.searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    self.searchBar.delegate = self;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    [tap setCancelsTouchesInView:NO];
 
 }
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    [self dismissKeyboard];
+}
+
+
+//*********************************************
+// Dismiss Active Keyboard
+
+- (void) dismissKeyboard {
+    // add self
+    [self.searchBar resignFirstResponder];
+}
+//*********************************************
 
 
 -(void)viewWillDisappear:(BOOL)animated {
     
     [self.timer invalidate];
+    
+    self.searchBar.text = @"";
+    [self.tableView reloadData];
     
     [self performSelector:@selector(changeTextAttributes) withObject:nil afterDelay:0.5];
 
@@ -126,6 +178,8 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     
+    [self.tabBarController.tabBar setHidden:NO];
+    
     self.navigationController.navigationItem.title = @"";
     self.title = @"AD Now";
     
@@ -144,6 +198,13 @@
     NSIndexPath *tableSelection = [self.tableView indexPathForSelectedRow];
     [self.tableView deselectRowAtIndexPath:tableSelection animated:NO];
     
+    [self queryForNewsArticles];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    
+    NSLog(@"Appear");
 }
 
 #pragma mark - Table view data source
@@ -155,7 +216,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.newsArticles.count;
+    return self.posts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -163,7 +224,7 @@
     static NSString *CellIdentifier = @"NewsCell";
     NewsTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    PFObject *object = [self.newsArticles objectAtIndex:indexPath.row];
+    PFObject *object = [self.posts objectAtIndex:indexPath.row];
     PFFile *thumbnail = [object objectForKey:@"postImageThumbnail"];
     PFImageView *thumbnailImageView = (PFImageView*)cell.image;
     thumbnailImageView.image = [UIImage imageNamed:@"adThumbnail.jpeg"];
@@ -197,7 +258,7 @@
     if ([segue.identifier isEqualToString:@"showPostDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow]; PostDetailTableViewController *destViewController = segue.destinationViewController;
         
-        PFObject *object = [self.newsArticles objectAtIndex:indexPath.row];
+        PFObject *object = [self.posts objectAtIndex:indexPath.row];
         NewsArticle *article = [[NewsArticle alloc] init];
         article.title = [object objectForKey:@"postTitle"];
         article.location = [object objectForKey:@"postLocation"];
@@ -231,7 +292,7 @@
     
     NSInteger hoursFromGMT = [[NSTimeZone localTimeZone] secondsFromGMT] / 3600;
     
-    //NSLog(@"YO: %d", hoursFromGMT);
+    NSLog(@"YO");
     
     [dc setHour:-24+(hoursFromGMT)];
     [dc setMinute:-[dc minute]];
@@ -250,7 +311,7 @@
         }
         else {
             
-            self.newsArticles = objects;
+            self.posts = [objects mutableCopy];
             [self.tableView reloadData];
             [ProgressHUD dismiss];
         }
@@ -264,8 +325,8 @@
 - (IBAction)addPostTapped:(id)sender {
     
     AddPostTableViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AddPost"];
-    UINavigationController *navigationController =
-    [[UINavigationController alloc] initWithRootViewController:destViewController];
+    CustomNavController *navigationController =
+    [[CustomNavController alloc] initWithRootViewController:destViewController];
     UIBarButtonItem *newBackButton =
     [[UIBarButtonItem alloc] initWithTitle:@""
                                      style:UIBarButtonItemStyleBordered
@@ -289,7 +350,7 @@
 
 - (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
     
-    if (self.newsArticles.count == 0) {
+    if (self.posts.count == 0) {
         return YES;
     }
     return NO;
@@ -301,6 +362,77 @@
 - (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView {
     return YES;
 }
+
+
+
+//*************************************
+// Search Userbase functionality
+
+- (void)searchUsers:(NSString *)search_lower {
+    
+    NSString *searchText = [self.searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Posts"];
+    //[query whereKey:@"postTitle" hasPrefix:searchText];
+    [query whereKey:@"searchedTitle" containsString:searchText];
+    [query setLimit:100];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error == nil) {
+            
+            [self.posts removeAllObjects];
+            [self.posts addObjectsFromArray:objects];
+            [self.tableView reloadData];
+            //self.searchedStory = objects.lastObject;
+            
+        }
+        else [ProgressHUD showError:@"Network error"];
+    }];
+}
+//*********************************************
+
+
+
+
+
+//*********************************************
+// Search Bar Properties
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    if ([searchText length] > 0) {
+        [self searchUsers:[searchText lowercaseString]];
+    }
+    
+    else {
+        
+        [self queryForNewsArticles];
+        
+    }
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar_ {
+    [searchBar_ setShowsCancelButton:NO animated:YES];
+}
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar_ {
+    [searchBar_ setShowsCancelButton:NO animated:YES];
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [self searchBarCancelled];
+}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar_ {
+    
+    NSString *searchText = [self.searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    [self searchUsers:searchText];
+}
+- (void)searchBarCancelled {
+    searchBar.text = @"";
+    [searchBar resignFirstResponder];
+}
+//*********************************************
+
+
+
+
 
 
 

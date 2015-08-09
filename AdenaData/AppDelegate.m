@@ -7,14 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "AddPostTableViewController.h"
+#import "CustomNavController.h"
+#import "NewsTableViewController.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface AppDelegate ()
 
+
+
 @end
 
 @implementation AppDelegate
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -52,6 +58,8 @@
     return YES;
 }
 
+
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
@@ -88,11 +96,15 @@
 }
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
+    [self.adnowVC queryForNewsArticles];
+    
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     if (currentInstallation.badge != 0) {
         currentInstallation.badge = 0;
         [currentInstallation saveEventually];
     }
+    
+    
 }
 - (void)applicationWillTerminate:(UIApplication *)application {
 }

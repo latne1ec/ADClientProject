@@ -12,7 +12,7 @@
 #import "NewsArticle.h"
 #import "ProgressHUD.h"
 
-@interface PostDetailTableViewController : UITableViewController
+@interface PostDetailTableViewController : UITableViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *firstCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *secondCell;
@@ -27,6 +27,9 @@
 @property (weak, nonatomic) IBOutlet UITextView *postTextview;
 
 @property (nonatomic, strong) NSString *objectId;
+
+@property (weak, nonatomic) IBOutlet UIView *locationTapView;
+
 
 
 

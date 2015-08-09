@@ -8,6 +8,7 @@
 
 #import "AddPostTableViewController.h"
 #import "JGActionSheet.h"
+#import "AppDelegate.h"
 #define SOURCETYPE UIImagePickerControllerSourceTypeCamera
 
 
@@ -29,26 +30,22 @@
 
 @synthesize firstCell, secondCell, thirdCell, fourthCell;
 
-
-- (BOOL) shouldAutorotate {
-    return YES;
-}
-
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    return YES;
-}
-
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return UIInterfaceOrientationLandscapeLeft | UIInterfaceOrientationLandscapeRight;
-}
-
-
-
+//-(BOOL)shouldAutorotate {
+//    
+//    return NO;
+//}
+//
+//-(NSUInteger)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskLandscapeLeft;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate setShouldRotate:YES];
+    
     
     self.title = @"Add Post";
     
@@ -108,7 +105,6 @@
 
 
 -(void)viewWillAppear:(BOOL)animated {
-    
     
 }
 

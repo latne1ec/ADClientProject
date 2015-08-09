@@ -7,6 +7,8 @@
 //
 
 #import "PostDetailTableViewController.h"
+#import "LocationViewController.h"
+
 
 @interface PostDetailTableViewController ()
 
@@ -35,7 +37,32 @@
     [self.flagButton.titleLabel setTintColor:[UIColor colorWithRed:0.98 green:0.443 blue:0.259 alpha:1]];
     
     [self checkIfFlagged];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showLocationView)];
+    tap.delegate = self;
+    tap.numberOfTapsRequired = 1;
+    
+    [self.locationTapView addGestureRecognizer:tap];
+    
+}
 
+-(void)showLocationView {
+    
+    NSLog(@"Tap");
+    LocationViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Location"];
+    destViewController.searchString = self.postLocationLabel.text;
+    
+    UINavigationController *navigationController =
+    [[UINavigationController alloc] initWithRootViewController:destViewController];
+    UIBarButtonItem *newBackButton =
+    [[UIBarButtonItem alloc] initWithTitle:@"AD Now Location"
+                                     style:UIBarButtonItemStyleBordered
+                                    target:nil
+                                    action:nil];
+    [[navigationController navigationItem] setBackBarButtonItem:newBackButton];
+    [self.navigationController presentViewController:navigationController animated:YES completion:^{
+    }];
+    
 }
 
 
@@ -138,8 +165,7 @@
             
         [[PFUser currentUser] addUniqueObject:self.thePost.objectId forKey:@"flaggedPosts"];
         [[PFUser currentUser] saveInBackground];
-        }
-            
+            }
         }
     }];
     
@@ -152,12 +178,13 @@
 
 - (IBAction)shareButtonTapped:(id)sender {
     
-    NSString *finalString = [NSString stringWithFormat:@"%@ at %@", post.title, post.date];
+    NSString *finalString = [NSString stringWithFormat:@"%@ at %@", post.title, post.location];
+    NSLog(@"Final: %@", finalString);
     
     UIActivityViewController *activityViewController =
     [[UIActivityViewController alloc] initWithActivityItems:@[finalString]
                                       applicationActivities:nil];
-    
+    ya
     [self.navigationController presentViewController:activityViewController
                                             animated:YES
                                           completion:^{

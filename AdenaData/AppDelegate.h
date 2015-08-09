@@ -10,10 +10,16 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 #import "NotificationViewController.h"
+#import "NewsTableViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (assign, nonatomic) BOOL shouldRotate;
+
+@property (nonatomic, weak) NewsTableViewController *adnowVC;
+
 
 
 @end

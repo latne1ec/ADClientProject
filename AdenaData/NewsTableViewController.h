@@ -16,14 +16,19 @@
 #import "DateTools.h"
 #import "AddPostTableViewController.h"
 
-@interface NewsTableViewController : UITableViewController
+@interface NewsTableViewController : UITableViewController <UISearchBarDelegate, UITabBarControllerDelegate>
 
 @property (nonatomic, strong) NSArray *newsArticles;
+@property (nonatomic, strong) NSMutableArray *posts;
+
 @property (nonatomic, strong) NSString *article;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 - (IBAction)addPostTapped:(id)sender;
+-(void)queryForNewsArticles;
+
 
 
 @end

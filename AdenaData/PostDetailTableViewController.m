@@ -184,11 +184,9 @@
     UIActivityViewController *activityViewController =
     [[UIActivityViewController alloc] initWithActivityItems:@[finalString]
                                       applicationActivities:nil];
-    ya
     [self.navigationController presentViewController:activityViewController
                                             animated:YES
                                           completion:^{
-                                              
                                           }];
 }
 

@@ -238,6 +238,9 @@ alpha:1.0]
 {
     NSLog(@"GET STARTED!");
     
+    [PFUser enableAutomaticUser];
+    [[PFUser currentUser] saveInBackground];
+    
     [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"hasRanApp"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     

@@ -331,6 +331,9 @@ UIImage* ResizeImage2(UIImage *image, CGFloat width, CGFloat height) {
     NSString *title = self.titleTextfield.text;
     NSString *location = self.locationTextfield.text;
     NSString *postText = self.postTextview.text;
+    
+    NSString *searchedTitle = [title lowercaseString];
+    
 
     if ([title length] < 2) {
      
@@ -357,6 +360,7 @@ UIImage* ResizeImage2(UIImage *image, CGFloat width, CGFloat height) {
 
     PFObject *post = [PFObject objectWithClassName:@"Posts"];
     [post setObject:title forKey:@"postTitle"];
+    [post setObject:searchedTitle forKey:@"searchedTitle"];
     [post setObject:file forKey:@"postImage"];
     [post setObject:self.filePic2 forKey:@"postImageThumbnail"];
     [post setObject:location forKey:@"postLocation"];

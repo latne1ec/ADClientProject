@@ -11,7 +11,7 @@
 #import <ParseUI/ParseUI.h>
 #import "ProgressHUD.h"
 
-@interface AddPostTableViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate>
+@interface AddPostTableViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *firstCell;
 
@@ -32,9 +32,15 @@
 
 @property (nonatomic, strong) PFFile *filePic2;
 
+@property (nonatomic, strong) UIScrollView *scrollview;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+
 
 - (IBAction)showActionSheet:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *addPhotoButton;
 
 
 

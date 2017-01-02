@@ -10,6 +10,8 @@
 #import "JGActionSheet.h"
 #import "AppDelegate.h"
 #define SOURCETYPE UIImagePickerControllerSourceTypeCamera
+#define ZOOM_STEP 2.0
+
 
 
 @interface AddPostTableViewController () <JGActionSheetDelegate> {
@@ -77,6 +79,41 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
     
+    self.scrollView.contentSize = CGSizeMake(self.thePhoto.frame.size.width, self.thePhoto.frame.size.height);
+    self.scrollView.minimumZoomScale=0.5;
+    self.scrollView.maximumZoomScale=6.0;
+    self.scrollView.delegate = self;
+    self.scrollView.tag = 69;
+    
+    
+    
+    
+}
+
+-(void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    
+    if (scrollView.tag != 69) {
+        return;
+    }
+    
+    NSLog(@"zoom");
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.tag != 69) {
+        return;
+    }
+
+    
+    NSLog(@"Scroll");
+}
+
+
+-(UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    NSLog(@"Zooooomin");
+    return self.thePhoto;
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {
@@ -280,7 +317,10 @@ shouldChangeTextInRange: (NSRange) range
         //if (error != nil) [ProgressHUD showError:@"Network error."];
     }];
     
+    
     self.thePhoto.image = image;
+    
+    [self.scrollView addSubview:self.thePhoto];
     self.thumbnail = image;
     
     self.addPhotoPic.hidden = YES;
@@ -294,6 +334,9 @@ shouldChangeTextInRange: (NSRange) range
 
     
     [picker dismissViewControllerAnimated:NO completion:NULL];
+    
+    [self.addPhotoButton removeTarget:self action:@selector(showActionSheet:) forControlEvents:UIControlEventAllEvents];
+    
 }
 //*********************************************
 

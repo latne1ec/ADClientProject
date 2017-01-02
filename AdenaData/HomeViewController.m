@@ -29,7 +29,27 @@
     CALayer *btn1 = [self.visitWebsiteButton layer];
     [btn1 setMasksToBounds:YES];
     [btn1 setCornerRadius:5.0f];
+    
+    
+    self.twitterButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.twitterButton.layer.shadowOpacity = 0.24;
+    self.twitterButton.layer.shadowRadius = 1.95;
+    self.twitterButton.layer.shadowOffset = CGSizeMake(1.95f, 1.95f);
 
+    self.websiteButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.websiteButton.layer.shadowOpacity = 0.24;
+    self.websiteButton.layer.shadowRadius = 1.95;
+    self.websiteButton.layer.shadowOffset = CGSizeMake(1.95f, 1.95f);
+    
+    self.facebookButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.facebookButton.layer.shadowOpacity = 0.24;
+    self.facebookButton.layer.shadowRadius = 1.95;
+    self.facebookButton.layer.shadowOffset = CGSizeMake(1.95f, 1.95f);
+    
+    
+    [self.twitterButton addTarget:self action:@selector(goToTwitter) forControlEvents:UIControlEventTouchUpInside];
+    [self.websiteButton addTarget:self action:@selector(goToWebsite) forControlEvents:UIControlEventTouchUpInside];
+    [self.facebookButton addTarget:self action:@selector(goToFacebook) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
@@ -60,11 +80,30 @@
 - (IBAction)visitWebsiteTapped:(id)sender {
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://adenadata.com"]];
-    
 }
 
 - (IBAction)reloadPage:(id)sender {
     
     [self loadWebpage];
 }
+
+-(void)goToTwitter {
+    
+    NSURL *url = [NSURL URLWithString:@"https://twitter.com/AdenaDataLLC"];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+-(void)goToWebsite {
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.adenadata.com/"];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+-(void)goToFacebook {
+    
+    NSURL *url = [NSURL URLWithString:@"https://www.facebook.com/749695621773532"];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+
 @end

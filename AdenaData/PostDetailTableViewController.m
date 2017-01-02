@@ -178,7 +178,17 @@
 
 - (IBAction)shareButtonTapped:(id)sender {
     
-    NSString *finalString = [NSString stringWithFormat:@"%@ at %@", post.title, post.location];
+    
+     NSString *string = [self.postLocationLabel.text stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    NSString *search = [NSString stringWithFormat:@"https://www.google.com/#q=%@", string];
+
+    
+    NSString *dasString = [search stringByReplacingOccurrencesOfString:@" " withString: @"+"];
+
+    
+    
+    NSString *finalString = [NSString stringWithFormat:@"%@ at %@: %@", post.title, post.location, dasString];
     NSLog(@"Final: %@", finalString);
     
     UIActivityViewController *activityViewController =
@@ -189,7 +199,5 @@
                                           completion:^{
                                           }];
 }
-
-
 
 @end

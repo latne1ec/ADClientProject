@@ -65,7 +65,6 @@
 		201703FC1B0EC782004E280E /* photo-frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201703FA1B0EC782004E280E /* photo-frame@2x.png */; };
 		201703FE1B0F6C57004E280E /* adThumbnail.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 201703FD1B0F6C57004E280E /* adThumbnail.jpeg */; };
 		203A1B791B16061700E0D132 /* cancelWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 203A1B781B16061700E0D132 /* cancelWhite@2x.png */; };
-		203A1B7B1B16072C00E0D132 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 203A1B7A1B16072C00E0D132 /* cancel@2x.png */; };
 		20497DE81B6552D6004A2950 /* addPost@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497DE71B6552D6004A2950 /* addPost@2x.png */; };
 		20497E391B6815CB004A2950 /* CustomNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20497E381B6815CB004A2950 /* CustomNavController.m */; };
 		20497E3C1B682636004A2950 /* ADNowNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20497E3B1B682636004A2950 /* ADNowNavController.m */; };
@@ -115,6 +114,10 @@
 		20EEEFD61B1576FC007EF98D /* Job.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEEFD51B1576FC007EF98D /* Job.m */; };
 		20EEEFD91B157EC2007EF98D /* FiltersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEEFD81B157EC2007EF98D /* FiltersTableViewController.m */; };
 		20EEEFDC1B15F839007EF98D /* JobPostingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEEFDB1B15F839007EF98D /* JobPostingsTableViewController.m */; };
+		20F5A2F61B8620A900FC7BA5 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F5A2F51B8620A900FC7BA5 /* cancel@2x.png */; };
+		20F5A3001B86AE6300FC7BA5 /* adLink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F5A2FD1B86AE6300FC7BA5 /* adLink@2x.png */; };
+		20F5A3011B86AE6300FC7BA5 /* facebookIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F5A2FE1B86AE6300FC7BA5 /* facebookIcon@2x.png */; };
+		20F5A3021B86AE6300FC7BA5 /* twitterIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F5A2FF1B86AE6300FC7BA5 /* twitterIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,7 +213,6 @@
 		201703FA1B0EC782004E280E /* photo-frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame@2x.png"; sourceTree = "<group>"; };
 		201703FD1B0F6C57004E280E /* adThumbnail.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adThumbnail.jpeg; sourceTree = "<group>"; };
 		203A1B781B16061700E0D132 /* cancelWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelWhite@2x.png"; sourceTree = "<group>"; };
-		203A1B7A1B16072C00E0D132 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
 		20497DE71B6552D6004A2950 /* addPost@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addPost@2x.png"; sourceTree = "<group>"; };
 		20497E371B6815CB004A2950 /* CustomNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavController.h; sourceTree = "<group>"; };
 		20497E381B6815CB004A2950 /* CustomNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavController.m; sourceTree = "<group>"; };
@@ -290,6 +292,10 @@
 		20EEEFD81B157EC2007EF98D /* FiltersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiltersTableViewController.m; sourceTree = "<group>"; };
 		20EEEFDA1B15F839007EF98D /* JobPostingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobPostingsTableViewController.h; sourceTree = "<group>"; };
 		20EEEFDB1B15F839007EF98D /* JobPostingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobPostingsTableViewController.m; sourceTree = "<group>"; };
+		20F5A2F51B8620A900FC7BA5 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		20F5A2FD1B86AE6300FC7BA5 /* adLink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adLink@2x.png"; sourceTree = "<group>"; };
+		20F5A2FE1B86AE6300FC7BA5 /* facebookIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebookIcon@2x.png"; sourceTree = "<group>"; };
+		20F5A2FF1B86AE6300FC7BA5 /* twitterIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,6 +528,10 @@
 		201703CE1B0E6542004E280E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				20F5A2FD1B86AE6300FC7BA5 /* adLink@2x.png */,
+				20F5A2FE1B86AE6300FC7BA5 /* facebookIcon@2x.png */,
+				20F5A2FF1B86AE6300FC7BA5 /* twitterIcon@2x.png */,
+				20F5A2F51B8620A900FC7BA5 /* cancel@2x.png */,
 				20497E5F1B6FDD1A004A2950 /* adBkgAug@2x.png */,
 				20497E511B6FA7F5004A2950 /* searchBkg.png */,
 				20497E4D1B6FA46F004A2950 /* searchBarYap.png */,
@@ -536,7 +546,6 @@
 				20790A681B5724430045481A /* addPhoto@2x.png */,
 				20790A601B571F1D0045481A /* adLogo2@2x.png */,
 				201186151B419AF400A59D55 /* adBkg@2x.png */,
-				203A1B7A1B16072C00E0D132 /* cancel@2x.png */,
 				203A1B781B16061700E0D132 /* cancelWhite@2x.png */,
 				20EEEFCF1B156591007EF98D /* searchBarBkg@2x.png */,
 				20EEEFC61B155B6C007EF98D /* jobs@2x.png */,
@@ -763,8 +772,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F5A3001B86AE6300FC7BA5 /* adLink@2x.png in Resources */,
 				201703F81B0EBE92004E280E /* DealView.png in Resources */,
-				203A1B7B1B16072C00E0D132 /* cancel@2x.png in Resources */,
 				201703971B0E4B40004E280E /* ProgressHUD.bundle in Resources */,
 				20497E401B6846B3004A2950 /* adBkgNew@2x.png in Resources */,
 				201703E11B0E7712004E280E /* news@2x.png in Resources */,
@@ -790,6 +799,7 @@
 				201703EE1B0EA73D004E280E /* link@2x.png in Resources */,
 				20497E671B6FE032004A2950 /* tour1.png in Resources */,
 				20790A611B571F1D0045481A /* adLogo2@2x.png in Resources */,
+				20F5A3011B86AE6300FC7BA5 /* facebookIcon@2x.png in Resources */,
 				201703FB1B0EC782004E280E /* photo-frame.png in Resources */,
 				201703E31B0E783D004E280E /* home@2x.png in Resources */,
 				20790A741B57F9970045481A /* mapIcon@2x.png in Resources */,
@@ -800,10 +810,12 @@
 				2090276B1B1D14DF003637F0 /* LICENSE in Resources */,
 				20790A6F1B5749F40045481A /* addPostTwo@2x.png in Resources */,
 				201703461B0E4429004E280E /* LaunchScreen.xib in Resources */,
+				20F5A3021B86AE6300FC7BA5 /* twitterIcon@2x.png in Resources */,
 				201703431B0E4429004E280E /* Images.xcassets in Resources */,
 				201703F41B0EAF03004E280E /* adenaDataSmall@2x.png in Resources */,
 				20EEEFC71B155B6C007EF98D /* jobs@2x.png in Resources */,
 				201186161B419AF400A59D55 /* adBkg@2x.png in Resources */,
+				20F5A2F61B8620A900FC7BA5 /* cancel@2x.png in Resources */,
 				201703C31B0E5BAB004E280E /* DateTools.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -928,8 +940,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -949,7 +961,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "af2906f3-aaec-4944-9b26-a720c99d5531";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -971,8 +983,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -985,7 +997,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "af2906f3-aaec-4944-9b26-a720c99d5531";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -996,7 +1008,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdenaData",
@@ -1005,7 +1018,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "af2906f3-aaec-4944-9b26-a720c99d5531";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1014,7 +1027,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdenaData",
@@ -1023,7 +1037,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "af2906f3-aaec-4944-9b26-a720c99d5531";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

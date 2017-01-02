@@ -20,5 +20,8 @@
 - (IBAction)reloadPage:(id)sender;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
+@property (weak, nonatomic) IBOutlet UIButton *websiteButton;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
 
 @end

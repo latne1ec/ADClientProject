@@ -11,8 +11,8 @@
 #import "AppDelegate.h"
 #define SOURCETYPE UIImagePickerControllerSourceTypeCamera
 #define ZOOM_STEP 2.0
-
-
+@import Firebase;
+@import FirebaseStorage;
 
 @interface AddPostTableViewController () <JGActionSheetDelegate> {
     JGActionSheet *_currentAnchoredActionSheet;
@@ -20,8 +20,6 @@
     BOOL _anchorLeft;
     JGActionSheet *_simple;
 }
-
-
 
 @end
 
@@ -32,15 +30,6 @@
 
 @synthesize firstCell, secondCell, thirdCell, fourthCell;
 
-//-(BOOL)shouldAutorotate {
-//    
-//    return NO;
-//}
-//
-//-(NSUInteger)supportedInterfaceOrientations
-//{
-//    return UIInterfaceOrientationMaskLandscapeLeft;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,6 +56,13 @@
     self.tableView.tableFooterView = [UIView new];
     self.tableView.layer.masksToBounds = YES;
     self.tableView.clipsToBounds = YES;
+    
+    NSDate *now = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MMM-dd HH:mm:ss"];
+    //Optionally for time zone conversions
+    NSString *timeString = [formatter stringFromDate:now];
+    NSLog(@"Time: %@", timeString);
     
 
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -374,12 +370,10 @@ UIImage* ResizeImage2(UIImage *image, CGFloat width, CGFloat height) {
     NSString *title = self.titleTextfield.text;
     NSString *location = self.locationTextfield.text;
     NSString *postText = self.postTextview.text;
-    
     NSString *searchedTitle = [title lowercaseString];
     
 
     if ([title length] < 2) {
-     
         [ProgressHUD showError:@"Please enter a title"];
     }
     else if ([location length] < 2) {
@@ -387,42 +381,73 @@ UIImage* ResizeImage2(UIImage *image, CGFloat width, CGFloat height) {
     }
     else if ([postText length] < 2) {
         [ProgressHUD showError:@"Please enter a post"];
-    }
-    
-    else {
-        
+    } else {
+
         if (self.thePhoto.image == nil) {
             self.thePhoto.image = [UIImage imageNamed:@"adThumbnail.jpeg"];
         }
-        
-    [ProgressHUD show:nil Interaction:NO];
-    self.addPhotoPic.hidden = YES;
-    PFFile *file = [PFFile fileWithName:@"picture.png" data:UIImagePNGRepresentation(self.thePhoto.image)];
-    self.filePic2 = [PFFile fileWithName:@"picture.png" data:UIImagePNGRepresentation(self.thePhoto.image)];
-    
 
-    PFObject *post = [PFObject objectWithClassName:@"Posts"];
-    [post setObject:title forKey:@"postTitle"];
-    [post setObject:searchedTitle forKey:@"searchedTitle"];
-    [post setObject:file forKey:@"postImage"];
-    [post setObject:self.filePic2 forKey:@"postImageThumbnail"];
-    [post setObject:location forKey:@"postLocation"];
-    [post setObject:postText forKey:@"postText"];
-    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-       
-        if (error) {
-            
-            [ProgressHUD showError:@"Network Error"];
-        }
-        else {
-            [ProgressHUD dismiss];
-            [ProgressHUD showSuccess:@"Shared Post"];
-            [self dismissKeyboard];
-            [self dismissViewControllerAnimated:YES completion:^{
-                
-            }];
-        }
-    }];
+        [ProgressHUD show:nil Interaction:NO];
+        
+        NSData *imageData = UIImagePNGRepresentation(self.thePhoto.image);
+        
+        FIRStorage *storage = [FIRStorage storage];
+        
+        // Create a storage reference from our storage service
+        FIRStorageReference *storageRef = [storage referenceForURL:@"gs://adenadata.appspot.com"];
+    
+        NSString *userId = [PFUser currentUser].objectId;
+        NSDate *now = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy-MMM-dd HH:mm:ss"];
+        //Optionally for time zone conversions
+        NSString *timeString = [formatter stringFromDate:now];
+        NSString *photoRefString = [NSString stringWithFormat:@"postimages/%@-%@.png", userId, timeString];
+        
+        // Create a reference to the file you want to upload
+        FIRStorageReference *photoRef = [storageRef child:photoRefString];
+        
+        FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
+        metadata.contentType = @"image/png";
+        
+        // Upload the file to the path "images/rivers.jpg"
+        FIRStorageUploadTask *uploadTask = [photoRef putData:imageData
+                                                     metadata:metadata
+                                                   completion:^(FIRStorageMetadata *metadata,
+                                                                NSError *error) {
+                                                       if (error != nil) {
+                                                           // Uh-oh, an error occurred!
+                                                           NSLog(@"Uh oh Error: %@", error.localizedDescription);
+                                                           [ProgressHUD showError:@"Unknown Error"];
+                                                       } else {
+                                                           
+                                                           NSURL *downloadURL = metadata.downloadURL;
+                                                           NSString *urlString = [NSString stringWithFormat:@"%@", downloadURL];
+                                                           self.addPhotoPic.hidden = YES;
+                                                           PFObject *post = [PFObject objectWithClassName:@"Posts"];
+                                                           [post setObject:title forKey:@"postTitle"];
+                                                           [post setObject:searchedTitle forKey:@"searchedTitle"];
+                                                           [post setObject:urlString forKey:@"postImageUrl"];
+                                                           [post setObject:location forKey:@"postLocation"];
+                                                           [post setObject:postText forKey:@"postText"];
+                                                           [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                                                               
+                                                               if (error) {
+                                                                   
+                                                                   [ProgressHUD showError:@"Network Error"];
+                                                               }
+                                                               else {
+                                                                   [ProgressHUD dismiss];
+                                                                   [ProgressHUD showSuccess:@"Shared Post"];
+                                                                   [self dismissKeyboard];
+                                                                   [self dismissViewControllerAnimated:YES completion:^{
+                                                                       
+                                                                   }];
+                                                               }
+                                                           }];
+
+                                                       }
+                                                   }];
     }
 }
 
@@ -433,4 +458,5 @@ UIImage* ResizeImage2(UIImage *image, CGFloat width, CGFloat height) {
     [self.navigationController dismissViewControllerAnimated:YES completion:^{
     }];
 }
+
 @end

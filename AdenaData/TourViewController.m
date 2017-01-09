@@ -14,6 +14,7 @@ alpha:1.0]
 
 #import "TourViewController.h"
 #import "NewsTableViewController.h"
+#import "HomeViewController.h"
 
 @interface TourViewController()
 @property(nonatomic,strong) UIScrollView *pagedTour;
@@ -238,22 +239,26 @@ alpha:1.0]
 {
     NSLog(@"GET STARTED!");
     
-    [PFUser enableAutomaticUser];
-    [[PFUser currentUser] saveInBackground];
+//    [PFUser enableAutomaticUser];
+//    [[PFUser currentUser] saveInBackground];
     
-    [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"hasRanApp"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+//    [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"hasRanApp"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
     
-    [CATransaction begin];
-    [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
-    CATransition *transition = [CATransition animation];
-    [transition setType:kCATransitionFade];
-    [self.navigationController.view.layer addAnimation:transition forKey:@"someAnimation"];
+//    [CATransaction begin];
+//    [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+//    CATransition *transition = [CATransition animation];
+//    [transition setType:kCATransitionFade];
+//    [self.navigationController.view.layer addAnimation:transition forKey:@"someAnimation"];
+//    
+//    HomeViewController *hvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Posts"];
+//    hvc.hidesBottomBarWhenPushed = NO;
+//    [self.navigationController pushViewController:hvc animated:NO];
+//    [CATransaction commit];
     
-    NewsTableViewController *ivc = [self.storyboard instantiateViewControllerWithIdentifier:@"Posts"];
-    ivc.hidesBottomBarWhenPushed = NO;
-    [self.navigationController pushViewController:ivc animated:NO];
-    [CATransaction commit];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 
 }
 

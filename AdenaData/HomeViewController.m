@@ -7,6 +7,8 @@
 //
 
 #import "HomeViewController.h"
+#import "TourViewController.h"
+#import <Parse.h>
 
 @interface HomeViewController ()
 
@@ -18,7 +20,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tabBarController setSelectedIndex:1];
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"hasRanApp"] isEqualToString:@"yes"]) {
+        
+        NSString *userSessionToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"userSessionToken"];
+        [PFUser becomeInBackground:userSessionToken block:^(PFUser *user, NSError *error) {
+            if (error) {
+                //NSLog(@"Error: %@", error.localizedDescription);
+            } else {
+                //NSLog(@"User logged in");
+            }
+        }];
+    }
+    else {
+        NSLog(@"HAS NOT RAN APP **");
+        
+        [PFUser enableAutomaticUser];
+        [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            if (error) {
+            } else {
+                NSString *userSessionToken = [PFUser currentUser].sessionToken;
+                [[NSUserDefaults standardUserDefaults] setObject:userSessionToken forKey:@"userSessionToken"];
+                [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"hasRanApp"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }
+        }];
+        
+        TourViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Tour"];
+        [self.navigationController presentViewController:tvc animated:FALSE completion:^{
+            
+        }];
+    }
+
+    
+    [self.tabBarController setSelectedIndex:0];
     [self loadWebpage];
 
     //Nav Bar Image
@@ -55,7 +89,7 @@
 
 -(void)loadWebpage {
     
-    [ProgressHUD show:nil];
+    //[ProgressHUD show:nil];
     NSString *url = @"http://www.adenadata.com";
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     self.webview.delegate = self;

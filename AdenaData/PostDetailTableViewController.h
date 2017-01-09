@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import <ParseUI/ParseUI.h>
+//#import <ParseUI/ParseUI.h>
 #import "NewsArticle.h"
 #import "ProgressHUD.h"
 
@@ -17,7 +17,9 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *firstCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *secondCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *thirdCell;
-@property (weak, nonatomic) IBOutlet PFImageView *postImage;
+//@property (weak, nonatomic) IBOutlet PFImageView *postImage;
+@property (nonatomic, strong) NSString *postImageUrl;
+@property (weak, nonatomic) IBOutlet UIImageView *postImage;
 @property (weak, nonatomic) IBOutlet UILabel *timeAgoLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *postTitleLabel;

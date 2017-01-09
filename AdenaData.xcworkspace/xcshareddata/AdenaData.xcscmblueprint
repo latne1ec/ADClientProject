@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D1F187D7BA64E701EF69C6EE57E151099542784E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D1F187D7BA64E701EF69C6EE57E151099542784E" : 9223372036854775807,
+    "A6E494E0CCA82411D3E13BC3EE8C39D5B4C2BE48" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "18668510-41F7-4384-AE49-8C389FD938DB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D1F187D7BA64E701EF69C6EE57E151099542784E" : "AdenaData\/",
+    "A6E494E0CCA82411D3E13BC3EE8C39D5B4C2BE48" : "AdenaData\/AdenaData\/UIAlertView-Blocks\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AdenaData",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AdenaData.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jivadevoe\/UIAlertView-Blocks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A6E494E0CCA82411D3E13BC3EE8C39D5B4C2BE48"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/latne1ec\/ADClientProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D1F187D7BA64E701EF69C6EE57E151099542784E"
+    }
+  ]
+}

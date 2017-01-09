@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import <ParseUI/ParseUI.h>
+//#import <ParseUI/ParseUI.h>
 #import "Event.h"
 
 @interface EventDetailTableViewController : UITableViewController
@@ -18,7 +18,10 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *eventDescriptionCell;
 
 @property (nonatomic, strong) Event *event;
-@property (weak, nonatomic) IBOutlet PFImageView *eventImage;
+//@property (weak, nonatomic) IBOutlet PFImageView *eventImage;
+@property (nonatomic, strong) NSString *eventImageUrl;
+@property (weak, nonatomic) IBOutlet UIImageView *eventImage;
+
 @property (weak, nonatomic) IBOutlet UILabel *eventDate;
 @property (weak, nonatomic) IBOutlet UITextView *eventDescription;
 @property (weak, nonatomic) IBOutlet UITextView *eventLink;

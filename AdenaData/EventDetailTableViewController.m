@@ -7,6 +7,8 @@
 //
 
 #import "EventDetailTableViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface EventDetailTableViewController ()
 
@@ -16,7 +18,7 @@
 
 @synthesize imageCell, eventDateCell, eventDescriptionCell;
 @synthesize event;
-@synthesize eventImage;
+//@synthesize eventImage;
 @synthesize eventDate;
 
 - (void)viewDidLoad {
@@ -28,8 +30,11 @@
     [self.eventDescription sizeToFit];
     [self.eventLink setTextColor:[UIColor colorWithRed:0.918 green:0.4 blue:0.22 alpha:1]];
     self.eventLink.text = event.url;
-    self.eventImage.file = event.thumbnail;
-    [eventImage loadInBackground];
+    NSString *urlString = event.imageUrl;
+    [self.eventImage sd_setImageWithURL:[NSURL URLWithString:urlString]
+                      placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+//    self.eventImage.file = event.thumbnail;
+//    [eventImage loadInBackground];
     
     self.tableView.tableFooterView = [UIView new];
     

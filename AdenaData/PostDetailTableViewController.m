@@ -8,7 +8,7 @@
 
 #import "PostDetailTableViewController.h"
 #import "LocationViewController.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface PostDetailTableViewController ()
 
@@ -24,11 +24,13 @@
     self.title = post.title;
     self.timeAgoLabel.text = _timeAgo;
     
-    NSLog(@"Post: %@", post.title);
     self.postLocationLabel.text = post.location;
     self.postTextview.text = post.thePost;
-    self.postImage.file = post.image;
-    [self.postImage loadInBackground];
+//    self.postImage.file = post.image;
+//    [self.postImage loadInBackground];
+    NSString *urlString = self.postImageUrl;
+    [self.postImage sd_setImageWithURL:[NSURL URLWithString:urlString]
+                      placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     
     self.tableView.tableFooterView = [UIView new];
     

@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ParseUI/ParseUI.h>
+//#import <ParseUI/ParseUI.h>
 
 @interface Event : NSObject
 
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) PFFile *thumbnail;
+//@property (nonatomic, strong) PFFile *thumbnail;
+@property (nonatomic, strong) NSString *imageUrl;
 @property (nonatomic, strong) NSString *date;
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *eventDescription;

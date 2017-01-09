@@ -12,7 +12,7 @@
 #import "ProgressHUD.h"
 #import "NewsArticle.h"
 #import "NewsDetailViewController.h"
-#import <ParseUI/ParseUI.h>
+//#import <ParseUI/ParseUI.h>
 #import "DateTools.h"
 #import "AddPostTableViewController.h"
 

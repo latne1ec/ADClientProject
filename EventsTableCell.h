@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ParseUI/ParseUI.h>
+//#import <ParseUI/ParseUI.h>
 
 @interface EventsTableCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet PFImageView *image;
+//@property (weak, nonatomic) IBOutlet PFImageView *image;
+@property (weak, nonatomic) IBOutlet UIImageView *eventImage;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageBkg;
 @property (weak, nonatomic) IBOutlet UIImageView *tableCellFade;

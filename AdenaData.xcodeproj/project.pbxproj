@@ -15,12 +15,6 @@
 		201703431B0E4429004E280E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201703421B0E4429004E280E /* Images.xcassets */; };
 		201703461B0E4429004E280E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201703441B0E4429004E280E /* LaunchScreen.xib */; };
 		201703521B0E4429004E280E /* AdenaDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201703511B0E4429004E280E /* AdenaDataTests.m */; };
-		201703621B0E4578004E280E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2017035C1B0E4578004E280E /* Bolts.framework */; };
-		201703631B0E4578004E280E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2017035D1B0E4578004E280E /* Parse.framework */; };
-		201703641B0E4578004E280E /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2017035E1B0E4578004E280E /* ParseCrashReporting.framework */; };
-		201703651B0E4578004E280E /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2017035F1B0E4578004E280E /* ParseFacebookUtils.framework */; };
-		201703661B0E4578004E280E /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201703601B0E4578004E280E /* ParseFacebookUtilsV4.framework */; };
-		201703671B0E4578004E280E /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201703611B0E4578004E280E /* ParseUI.framework */; };
 		201703731B0E4748004E280E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201703681B0E4748004E280E /* AudioToolbox.framework */; };
 		201703741B0E4748004E280E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201703691B0E4748004E280E /* CFNetwork.framework */; };
 		201703751B0E4748004E280E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2017036A1B0E4748004E280E /* CoreGraphics.framework */; };
@@ -75,7 +69,6 @@
 		20497E4E1B6FA46F004A2950 /* searchBarYap.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497E4D1B6FA46F004A2950 /* searchBarYap.png */; };
 		20497E521B6FA7F5004A2950 /* searchBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497E511B6FA7F5004A2950 /* searchBkg.png */; };
 		20497E5B1B6FA9FD004A2950 /* TourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20497E571B6FA9FD004A2950 /* TourViewController.m */; };
-		20497E601B6FDD1A004A2950 /* adBkgAug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497E5F1B6FDD1A004A2950 /* adBkgAug@2x.png */; };
 		20497E671B6FE032004A2950 /* tour1.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497E651B6FE032004A2950 /* tour1.png */; };
 		20497E681B6FE032004A2950 /* tour2.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497E661B6FE032004A2950 /* tour2.png */; };
 		20497E6A1B6FE0EC004A2950 /* tour3.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497E691B6FE0EC004A2950 /* tour3.png */; };
@@ -107,6 +100,8 @@
 		2090276E1B1D14DF003637F0 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 209027671B1D14DF003637F0 /* UIActionSheet+Blocks.m */; };
 		2090276F1B1D14DF003637F0 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 209027691B1D14DF003637F0 /* UIAlertView+Blocks.m */; };
 		209027701B1D14DF003637F0 /* UIAlertView-Blocks.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2090276A1B1D14DF003637F0 /* UIAlertView-Blocks.podspec */; };
+		20A8CB841E1D60C200307EF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20A8CB831E1D60C200307EF7 /* GoogleService-Info.plist */; };
+		20C4E0211E1F08BE0012ECC3 /* adBkgAug@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20C4E0201E1F08BE0012ECC3 /* adBkgAug@2x.png */; };
 		20EEEFC71B155B6C007EF98D /* jobs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20EEEFC61B155B6C007EF98D /* jobs@2x.png */; };
 		20EEEFCE1B155E85007EF98D /* JobsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EEEFCD1B155E85007EF98D /* JobsTableCell.m */; };
 		20EEEFD01B156591007EF98D /* searchBarBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20EEEFCF1B156591007EF98D /* searchBarBkg@2x.png */; };
@@ -118,6 +113,8 @@
 		20F5A3001B86AE6300FC7BA5 /* adLink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F5A2FD1B86AE6300FC7BA5 /* adLink@2x.png */; };
 		20F5A3011B86AE6300FC7BA5 /* facebookIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F5A2FE1B86AE6300FC7BA5 /* facebookIcon@2x.png */; };
 		20F5A3021B86AE6300FC7BA5 /* twitterIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F5A2FF1B86AE6300FC7BA5 /* twitterIcon@2x.png */; };
+		406D736ED914322F009E99F6 /* libPods-AdenaDataTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D22BCB31ADD7E26952D19A10 /* libPods-AdenaDataTests.a */; };
+		B5FAE112CE611B32C9592C02 /* libPods-AdenaData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1D4BAF13E6DAEC59FF816C /* libPods-AdenaData.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +128,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074B69C51B2C928FDAE833F1 /* Pods-AdenaDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdenaDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdenaDataTests/Pods-AdenaDataTests.release.xcconfig"; sourceTree = "<group>"; };
 		200FE9791B1CA9FF00B87640 /* NotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationViewController.h; sourceTree = "<group>"; };
 		200FE97A1B1CA9FF00B87640 /* NotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationViewController.m; sourceTree = "<group>"; };
 		201186151B419AF400A59D55 /* adBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adBkg@2x.png"; sourceTree = "<group>"; };
@@ -145,12 +143,6 @@
 		2017034B1B0E4429004E280E /* AdenaDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdenaDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201703501B0E4429004E280E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201703511B0E4429004E280E /* AdenaDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdenaDataTests.m; sourceTree = "<group>"; };
-		2017035C1B0E4578004E280E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		2017035D1B0E4578004E280E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		2017035E1B0E4578004E280E /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		2017035F1B0E4578004E280E /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		201703601B0E4578004E280E /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		201703611B0E4578004E280E /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		201703681B0E4748004E280E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		201703691B0E4748004E280E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2017036A1B0E4748004E280E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,7 +219,6 @@
 		20497E511B6FA7F5004A2950 /* searchBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchBkg.png; sourceTree = "<group>"; };
 		20497E561B6FA9FD004A2950 /* TourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourViewController.h; sourceTree = "<group>"; };
 		20497E571B6FA9FD004A2950 /* TourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourViewController.m; sourceTree = "<group>"; };
-		20497E5F1B6FDD1A004A2950 /* adBkgAug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adBkgAug@2x.png"; sourceTree = "<group>"; };
 		20497E651B6FE032004A2950 /* tour1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tour1.png; sourceTree = "<group>"; };
 		20497E661B6FE032004A2950 /* tour2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tour2.png; sourceTree = "<group>"; };
 		20497E691B6FE0EC004A2950 /* tour3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tour3.png; sourceTree = "<group>"; };
@@ -280,6 +271,8 @@
 		209027681B1D14DF003637F0 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		209027691B1D14DF003637F0 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		2090276A1B1D14DF003637F0 /* UIAlertView-Blocks.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIAlertView-Blocks.podspec"; sourceTree = "<group>"; };
+		20A8CB831E1D60C200307EF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		20C4E0201E1F08BE0012ECC3 /* adBkgAug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adBkgAug@2x.png"; sourceTree = "<group>"; };
 		20EEEFC61B155B6C007EF98D /* jobs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jobs@2x.png"; sourceTree = "<group>"; };
 		20EEEFCC1B155E85007EF98D /* JobsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobsTableCell.h; sourceTree = "<group>"; };
 		20EEEFCD1B155E85007EF98D /* JobsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobsTableCell.m; sourceTree = "<group>"; };
@@ -296,6 +289,11 @@
 		20F5A2FD1B86AE6300FC7BA5 /* adLink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "adLink@2x.png"; sourceTree = "<group>"; };
 		20F5A2FE1B86AE6300FC7BA5 /* facebookIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebookIcon@2x.png"; sourceTree = "<group>"; };
 		20F5A2FF1B86AE6300FC7BA5 /* twitterIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitterIcon@2x.png"; sourceTree = "<group>"; };
+		334294167D645AEE4852970C /* Pods-AdenaData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdenaData.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdenaData/Pods-AdenaData.release.xcconfig"; sourceTree = "<group>"; };
+		6D1D4BAF13E6DAEC59FF816C /* libPods-AdenaData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdenaData.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B85962B362627F14588AD4A /* Pods-AdenaDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdenaDataTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdenaDataTests/Pods-AdenaDataTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D22BCB31ADD7E26952D19A10 /* libPods-AdenaDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdenaDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD6A8A3A9727E46B4AB39DFC /* Pods-AdenaData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdenaData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdenaData/Pods-AdenaData.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,12 +312,7 @@
 				2017037B1B0E4748004E280E /* Security.framework in Frameworks */,
 				2017037C1B0E4748004E280E /* StoreKit.framework in Frameworks */,
 				2017037D1B0E4748004E280E /* SystemConfiguration.framework in Frameworks */,
-				201703671B0E4578004E280E /* ParseUI.framework in Frameworks */,
-				201703631B0E4578004E280E /* Parse.framework in Frameworks */,
-				201703641B0E4578004E280E /* ParseCrashReporting.framework in Frameworks */,
-				201703651B0E4578004E280E /* ParseFacebookUtils.framework in Frameworks */,
-				201703621B0E4578004E280E /* Bolts.framework in Frameworks */,
-				201703661B0E4578004E280E /* ParseFacebookUtilsV4.framework in Frameworks */,
+				B5FAE112CE611B32C9592C02 /* libPods-AdenaData.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +320,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				406D736ED914322F009E99F6 /* libPods-AdenaDataTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +344,7 @@
 				201703331B0E4429004E280E /* Products */,
 				2017035B1B0E4569004E280E /* Frameworks */,
 				201703931B0E4B2E004E280E /* Libraries */,
+				4A9B7D9628B429C85FEF1100 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -391,6 +386,7 @@
 			children = (
 				201703CE1B0E6542004E280E /* Images */,
 				201703361B0E4429004E280E /* Info.plist */,
+				20A8CB831E1D60C200307EF7 /* GoogleService-Info.plist */,
 				201703371B0E4429004E280E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -427,12 +423,8 @@
 				201703701B0E4748004E280E /* Security.framework */,
 				201703711B0E4748004E280E /* StoreKit.framework */,
 				201703721B0E4748004E280E /* SystemConfiguration.framework */,
-				2017035C1B0E4578004E280E /* Bolts.framework */,
-				2017035D1B0E4578004E280E /* Parse.framework */,
-				2017035E1B0E4578004E280E /* ParseCrashReporting.framework */,
-				2017035F1B0E4578004E280E /* ParseFacebookUtils.framework */,
-				201703601B0E4578004E280E /* ParseFacebookUtilsV4.framework */,
-				201703611B0E4578004E280E /* ParseUI.framework */,
+				6D1D4BAF13E6DAEC59FF816C /* libPods-AdenaData.a */,
+				D22BCB31ADD7E26952D19A10 /* libPods-AdenaDataTests.a */,
 			);
 			name = Frameworks;
 			path = AdenaData;
@@ -528,11 +520,11 @@
 		201703CE1B0E6542004E280E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				20C4E0201E1F08BE0012ECC3 /* adBkgAug@2x.png */,
 				20F5A2FD1B86AE6300FC7BA5 /* adLink@2x.png */,
 				20F5A2FE1B86AE6300FC7BA5 /* facebookIcon@2x.png */,
 				20F5A2FF1B86AE6300FC7BA5 /* twitterIcon@2x.png */,
 				20F5A2F51B8620A900FC7BA5 /* cancel@2x.png */,
-				20497E5F1B6FDD1A004A2950 /* adBkgAug@2x.png */,
 				20497E511B6FA7F5004A2950 /* searchBkg.png */,
 				20497E4D1B6FA46F004A2950 /* searchBarYap.png */,
 				20497E471B6852F0004A2950 /* jump@2x.png */,
@@ -691,6 +683,17 @@
 			name = Jobs;
 			sourceTree = "<group>";
 		};
+		4A9B7D9628B429C85FEF1100 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD6A8A3A9727E46B4AB39DFC /* Pods-AdenaData.debug.xcconfig */,
+				334294167D645AEE4852970C /* Pods-AdenaData.release.xcconfig */,
+				7B85962B362627F14588AD4A /* Pods-AdenaDataTests.debug.xcconfig */,
+				074B69C51B2C928FDAE833F1 /* Pods-AdenaDataTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -698,9 +701,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 201703551B0E4429004E280E /* Build configuration list for PBXNativeTarget "AdenaData" */;
 			buildPhases = (
+				FB801856D8ED8D150C5BB50C /* 📦 Check Pods Manifest.lock */,
 				2017032E1B0E4429004E280E /* Sources */,
 				2017032F1B0E4429004E280E /* Frameworks */,
 				201703301B0E4429004E280E /* Resources */,
+				5425EDD15F18A78723650248 /* 📦 Embed Pods Frameworks */,
+				E490A6BA502D75C8BEC77BD1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -715,9 +721,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 201703581B0E4429004E280E /* Build configuration list for PBXNativeTarget "AdenaDataTests" */;
 			buildPhases = (
+				9A24017F3B878C7E2ACD0DE3 /* 📦 Check Pods Manifest.lock */,
 				201703471B0E4429004E280E /* Sources */,
 				201703481B0E4429004E280E /* Frameworks */,
 				201703491B0E4429004E280E /* Resources */,
+				C3DC51E9C4BB18513B1D3038 /* 📦 Embed Pods Frameworks */,
+				B7D5BE20699A0F48709ED8B1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -741,6 +750,7 @@
 					201703311B0E4429004E280E = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = H875PU7D8W;
+						ProvisioningStyle = Automatic;
 					};
 					2017034A1B0E4429004E280E = {
 						CreatedOnToolsVersion = 6.2;
@@ -779,11 +789,12 @@
 				201703E11B0E7712004E280E /* news@2x.png in Resources */,
 				20497E6A1B6FE0EC004A2950 /* tour3.png in Resources */,
 				20790A691B5724430045481A /* addPhoto@2x.png in Resources */,
-				20497E601B6FDD1A004A2950 /* adBkgAug@2x.png in Resources */,
 				209027701B1D14DF003637F0 /* UIAlertView-Blocks.podspec in Resources */,
 				201703411B0E4429004E280E /* Main.storyboard in Resources */,
 				20497E481B6852F0004A2950 /* jump@2x.png in Resources */,
 				20497DE81B6552D6004A2950 /* addPost@2x.png in Resources */,
+				20A8CB841E1D60C200307EF7 /* GoogleService-Info.plist in Resources */,
+				20C4E0211E1F08BE0012ECC3 /* adBkgAug@2x.png in Resources */,
 				201703EA1B0EA590004E280E /* calendar@2x.png in Resources */,
 				20497E461B684E90004A2950 /* adNow@2x.png in Resources */,
 				201703D21B0E6665004E280E /* TableCellFade.png in Resources */,
@@ -828,6 +839,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5425EDD15F18A78723650248 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdenaData/Pods-AdenaData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A24017F3B878C7E2ACD0DE3 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7D5BE20699A0F48709ED8B1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdenaDataTests/Pods-AdenaDataTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3DC51E9C4BB18513B1D3038 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdenaDataTests/Pods-AdenaDataTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E490A6BA502D75C8BEC77BD1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdenaData/Pods-AdenaData-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB801856D8ED8D150C5BB50C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2017032E1B0E4429004E280E /* Sources */ = {
@@ -1005,11 +1109,13 @@
 		};
 		201703561B0E4429004E280E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD6A8A3A9727E46B4AB39DFC /* Pods-AdenaData.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = H875PU7D8W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdenaData",
@@ -1024,11 +1130,13 @@
 		};
 		201703571B0E4429004E280E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334294167D645AEE4852970C /* Pods-AdenaData.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = H875PU7D8W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AdenaData",
@@ -1043,6 +1151,7 @@
 		};
 		201703591B0E4429004E280E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B85962B362627F14588AD4A /* Pods-AdenaDataTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1062,6 +1171,7 @@
 		};
 		2017035A1B0E4429004E280E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 074B69C51B2C928FDAE833F1 /* Pods-AdenaDataTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

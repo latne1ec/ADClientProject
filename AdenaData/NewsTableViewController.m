@@ -13,7 +13,7 @@
 #import "CustomNavController.h"
 #import "AppDelegate.h"
 #import "TourViewController.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface NewsTableViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
@@ -33,7 +33,7 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     appDelegate.adnowVC = self;
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     
     self.title = @"AD Now";
@@ -48,21 +48,6 @@
 //           
 //        }];
 //    }
-    
-    
-    
-    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"hasRanApp"] isEqualToString:@"yes"]) {
-        NSLog(@"HAS RAN APP");
-    }
-    else {
-        NSLog(@"NOT RAN ");
-        TourViewController *tvc = [self.storyboard instantiateViewControllerWithIdentifier:@"Tour"];
-        [[UIApplication sharedApplication] setStatusBarHidden:YES];
-        //tvc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:tvc animated:NO];
-        //[self.tabBarController setHidesBottomBarWhenPushed:YES];
-        [self.tabBarController.tabBar setHidden:YES];
-    }
     
     
     [self queryForNewsArticles];
@@ -183,9 +168,8 @@
     self.navigationController.navigationItem.title = @"";
     self.title = @"AD Now";
     
-    self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];
-    
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+//    self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];    
+//    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     
     NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowColor = [UIColor clearColor];
@@ -203,8 +187,6 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    
-    NSLog(@"Appear");
 }
 
 #pragma mark - Table view data source
@@ -225,13 +207,17 @@
     NewsTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     PFObject *object = [self.posts objectAtIndex:indexPath.row];
-    PFFile *thumbnail = [object objectForKey:@"postImageThumbnail"];
-    PFImageView *thumbnailImageView = (PFImageView*)cell.image;
-    thumbnailImageView.image = [UIImage imageNamed:@"adThumbnail.jpeg"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
-    cell.image.layer.cornerRadius = 2;
-    cell.image.clipsToBounds = YES;
+//    PFFile *thumbnail = [object objectForKey:@"postImageThumbnail"];
+//    PFImageView *thumbnailImageView = (PFImageView*)cell.image;
+//    thumbnailImageView.image = [UIImage imageNamed:@"adThumbnail.jpeg"];
+//    thumbnailImageView.file = thumbnail;
+//    [thumbnailImageView loadInBackground];
+    NSString *urlString = [object objectForKey:@"postImageUrl"];
+    [cell.cellImage sd_setImageWithURL:[NSURL URLWithString:urlString]
+                 placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    
+    cell.cellImage.layer.cornerRadius = 2;
+    cell.cellImage.clipsToBounds = YES;
     
     cell.imageBkg.layer.cornerRadius = 4;
     cell.imageBkg.clipsToBounds = YES;
@@ -268,7 +254,8 @@
         
         destViewController.title = article.title;
         destViewController.postLocationLabel.text = article.location;
-        destViewController.postImage.file = article.image;
+        //destViewController.postImage.file = article.image;
+        destViewController.postImageUrl = [object objectForKey:@"postImageUrl"];
         destViewController.post = article;
         destViewController.postTextview.text = article.thePost;
         destViewController.objectId = objectId;
@@ -292,7 +279,6 @@
     
     NSInteger hoursFromGMT = [[NSTimeZone localTimeZone] secondsFromGMT] / 3600;
     
-    NSLog(@"YO");
     
     [dc setHour:-24+(hoursFromGMT)];
     [dc setMinute:-[dc minute]];

@@ -7,6 +7,7 @@
 //
 
 #import "EventsTableViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface EventsTableViewController ()
 
@@ -48,13 +49,16 @@
     EventsTableCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     PFObject *object = [self.events objectAtIndex:indexPath.row];
-    PFFile *thumbnail = [object objectForKey:@"eventImage"];
-    PFImageView *thumbnailImageView = (PFImageView*)cell.image;
-    thumbnailImageView.image = [UIImage imageNamed:@"adThumbnail"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
-    cell.image.layer.cornerRadius = 4;
-    cell.image.clipsToBounds = YES;
+//    PFFile *thumbnail = [object objectForKey:@"eventImage"];
+//    PFImageView *thumbnailImageView = (PFImageView*)cell.image;
+//    thumbnailImageView.image = [UIImage imageNamed:@"adThumbnail"];
+//    thumbnailImageView.file = thumbnail;
+//    [thumbnailImageView loadInBackground];
+    cell.eventImage.layer.cornerRadius = 4;
+    cell.eventImage.clipsToBounds = YES;
+    NSString *urlString = [object objectForKey:@"eventImageUrl"];
+    [cell.eventImage sd_setImageWithURL:[NSURL URLWithString:urlString]
+                      placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     cell.imageBkg.layer.cornerRadius = 8;
     cell.imageBkg.clipsToBounds = YES;
     cell.tableCellFade.layer.cornerRadius = 3;
@@ -81,12 +85,12 @@
         Event *event = [[Event alloc] init];
         event.title = [object objectForKey:@"eventName"];
         event.url = [object objectForKey:@"eventUrl"];
-        event.thumbnail = [object objectForKey:@"eventImage"];
+        //event.thumbnail = [object objectForKey:@"eventImage"];
+        event.imageUrl = [object objectForKey:@"eventImageUrl"];
         event.date = [object objectForKey:@"eventDate"];
         event.eventDescription = [object objectForKey:@"eventDescription"];
         event.url = [object objectForKey:@"eventUrl"];
         destViewController.event = event;
-        
         [segue.destinationViewController setTitle:event.title];
         destViewController.hidesBottomBarWhenPushed = YES;
         

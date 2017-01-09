@@ -10,29 +10,44 @@
 #import "AddPostTableViewController.h"
 #import "CustomNavController.h"
 #import "NewsTableViewController.h"
+@import Firebase;
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @interface AppDelegate ()
-
-
 
 @end
 
 @implementation AppDelegate
 
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    [FIRApp configure];
     
-    //Parse Backend
-    [Parse setApplicationId:@"fmyKfeKVisMjd17R32lojagYFn7NQcpYy7z9Oaqz"
-                  clientKey:@"FIYdqi1M0bmswOvDyMGtUwdCjaeMThJcklHeOeBl"];
+    //Parse Backend    
+    [Parse enableLocalDatastore];
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"fmyKfeKVisMjd17R32lojagYFn7NQcpYy7z9Oaqz";
+        configuration.server = @"http://adenadata.herokuapp.com/api";
+    }]];
+    
+    
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"hasMigrated"] isEqualToString:@"yes"]) {
+        // Continue
+        [[NSUserDefaults standardUserDefaults] setObject:@"no" forKey:@"hasRanApp"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
+    } else {
+        [PFUser logOut];
+        [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"hasMigrated"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
     
     //Parse Analytics
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    [PFImageView class];
+    //[PFImageView class];
     
     
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.937 green:0.416 blue:0.231 alpha:1]];
@@ -103,8 +118,6 @@
         currentInstallation.badge = 0;
         [currentInstallation saveEventually];
     }
-    
-    
 }
 - (void)applicationWillTerminate:(UIApplication *)application {
 }

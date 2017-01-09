@@ -10,7 +10,7 @@
 
 @interface NewsTableCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UIImageView *cellImage;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageBkg;
 @property (weak, nonatomic) IBOutlet UILabel *title;

@@ -8,8 +8,10 @@
 
 #import "EventsTableViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "UIScrollView+EmptyDataSet.h"
 
-@interface EventsTableViewController ()
+
+@interface EventsTableViewController () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @end
 
@@ -28,6 +30,9 @@
     //Nav Bar Image
     UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"adenaDataSmall"]]];
     self.navigationItem.leftBarButtonItem = item;
+    
+    self.tableView.emptyDataSetSource = self;
+    self.tableView.emptyDataSetDelegate = self;
     
 }
 
@@ -75,6 +80,32 @@
     return 220;
     
 }
+
+//// Empty Table View Properties
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    
+    NSString *text = @"No current events,\ncheck back soon!";
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Regular" size:18],
+                                 NSForegroundColorAttributeName: [UIColor colorWithRed:0.8 green:0.796 blue:0.796 alpha:1]};
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
+    
+    if (self.events.count == 0) {
+        return YES;
+    }
+    return NO;
+}
+
+- (CGPoint)offsetForEmptyDataSet:(UIScrollView *)scrollView {
+    return CGPointZero;
+}
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView {
+    return YES;
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     

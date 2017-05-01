@@ -33,16 +33,16 @@
     }]];
     
     
-    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"hasMigrated"] isEqualToString:@"yes"]) {
-        // Continue
-        [[NSUserDefaults standardUserDefaults] setObject:@"no" forKey:@"hasRanApp"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-
-    } else {
-        [PFUser logOut];
-        [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"hasMigrated"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
+//    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"hasMigrated"] isEqualToString:@"yes"]) {
+//        // Continue
+//        [[NSUserDefaults standardUserDefaults] setObject:@"no" forKey:@"hasRanApp"];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+//
+//    } else {
+//        [PFUser logOut];
+//        [[NSUserDefaults standardUserDefaults] setObject:@"yes" forKey:@"hasMigrated"];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+//    }
     
     
     //Parse Analytics

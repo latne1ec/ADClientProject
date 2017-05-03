@@ -31,6 +31,11 @@
     
 }
 
+- (void)viewDidLayoutSubviews {
+    [self.jobPositionDetails setContentOffset:CGPointZero animated:NO];
+    [self.jobRequirements setContentOffset:CGPointZero animated:NO];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

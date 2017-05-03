@@ -1091,7 +1091,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4X-KS-wk8">
-                                                    <rect key="frame" x="13" y="38" width="346" height="220"/>
+                                                    <rect key="frame" x="13" y="42" width="346" height="220"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <string key="text">The Maps App team is looking for a talented and passionate software engineer to contribute to the iOS Maps application, a cornerstone of Apple's mobile platform used by hundreds of millions worldwide. Along with excellent skills in object-oriented software design and programming, the successful candidate will have experience developing sophisticated user interfaces in Cocoa Touch. User interfaces in Cocoa Touch and Objective-C. User interfaces in Cocoa Touch and Swift. User interfaces in Cocoa Touch and Objective-C. User interfaces in Cocoa Touch and Swift, Java, Python and C++, C# etc. User interfaces in Cocoa Touch and Objective-C. User interfaces in Objective C. User interfaces in Cocoa Touch and Objective-C. User interfaces in Cocoa Touch and Swift, Java, Python and C++, C# etc. </string>
                                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1100,8 +1100,8 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="v4X-KS-wk8" secondAttribute="bottom" constant="19.5" id="Qcd-Iu-zcg"/>
-                                                <constraint firstItem="v4X-KS-wk8" firstAttribute="top" secondItem="mDa-7i-sHh" secondAttribute="topMargin" constant="30" id="W6N-5K-qSv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="v4X-KS-wk8" secondAttribute="bottom" constant="15.5" id="Qcd-Iu-zcg"/>
+                                                <constraint firstItem="v4X-KS-wk8" firstAttribute="top" secondItem="mDa-7i-sHh" secondAttribute="topMargin" constant="34" id="W6N-5K-qSv"/>
                                                 <constraint firstItem="v4X-KS-wk8" firstAttribute="leading" secondItem="mDa-7i-sHh" secondAttribute="leadingMargin" constant="5" id="g4x-Un-2P3"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="v4X-KS-wk8" secondAttribute="trailing" constant="8" id="ta8-kG-7Od"/>
                                             </constraints>
@@ -1121,8 +1121,8 @@
                                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVw-9X-3jv">
-                                                    <rect key="frame" x="12" y="38" width="347" height="380"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVw-9X-3jv">
+                                                    <rect key="frame" x="12" y="48" width="347" height="380"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" red="1" green="0.34719722679999998" blue="0.1066646164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <string key="text">Strong object-oriented programming and design skills.
@@ -1137,10 +1137,10 @@ Excellent communication skills. </string>
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="GVw-9X-3jv" secondAttribute="bottom" constant="-6.5" id="DKK-0T-c5y"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GVw-9X-3jv" secondAttribute="bottom" constant="-16.5" id="DKK-0T-c5y"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="GVw-9X-3jv" secondAttribute="trailing" constant="8" id="Jg8-ot-8Ne"/>
                                                 <constraint firstItem="GVw-9X-3jv" firstAttribute="leading" secondItem="yXS-Aq-QlS" secondAttribute="leadingMargin" constant="4" id="Lyl-CH-nZt"/>
-                                                <constraint firstItem="GVw-9X-3jv" firstAttribute="top" secondItem="yXS-Aq-QlS" secondAttribute="topMargin" constant="30" id="VjA-mV-DMj"/>
+                                                <constraint firstItem="GVw-9X-3jv" firstAttribute="top" secondItem="yXS-Aq-QlS" secondAttribute="topMargin" constant="40" id="VjA-mV-DMj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

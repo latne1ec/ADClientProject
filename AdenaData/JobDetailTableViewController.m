@@ -29,6 +29,9 @@
     self.jobPositionDetails.text = job.positionDetails;
     self.jobRequirements.text = job.requirements;
     
+    self.tableView.estimatedRowHeight = 44.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
 }
 
 - (void)viewDidLayoutSubviews {

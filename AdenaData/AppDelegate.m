@@ -26,7 +26,7 @@
     [FIRApp configure];
     
     //Parse Backend    
-    [Parse enableLocalDatastore];
+    //[Parse enableLocalDatastore];
     [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         configuration.applicationId = @"fmyKfeKVisMjd17R32lojagYFn7NQcpYy7z9Oaqz";
         configuration.server = @"http://adenadata.herokuapp.com/api";
@@ -46,7 +46,7 @@
     
     
     //Parse Analytics
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     //[PFImageView class];
     
     
@@ -61,14 +61,14 @@
                                                           shadow, NSShadowAttributeName,
                                                           [UIFont fontWithName:@"AvenirNext-Medium" size:18.5], NSFontAttributeName, nil]];
     
-    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
-                                                    UIUserNotificationTypeBadge |
-                                                    UIUserNotificationTypeSound);
-    
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
-                                                                             categories:nil];
-    [application registerUserNotificationSettings:settings];
-    [application registerForRemoteNotifications];
+//    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+//                                                    UIUserNotificationTypeBadge |
+//                                                    UIUserNotificationTypeSound);
+//    
+//    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+//                                                                             categories:nil];
+//    [application registerUserNotificationSettings:settings];
+//    [application registerForRemoteNotifications];
     
     return YES;
 }
@@ -77,31 +77,31 @@
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Store the deviceToken in the current installation and save it to Parse.
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    [currentInstallation setDeviceTokenFromData:deviceToken];
-    currentInstallation.channels = @[ @"global" ];
-    [currentInstallation saveInBackground];
+//    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+//    [currentInstallation setDeviceTokenFromData:deviceToken];
+//    currentInstallation.channels = @[ @"global" ];
+//    [currentInstallation saveInBackground];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
    
-    [PFPush handlePush:userInfo];
-
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    NotificationViewController *webview = [storyboard instantiateViewControllerWithIdentifier:@"PushWebview"];
-    
-    UINavigationController *navigationController =
-    [[UINavigationController alloc] initWithRootViewController:webview];
-    
-    NSString *url = [userInfo valueForKey:@"url"];
-    NSString *title = [userInfo valueForKey:@"source"];
-    
-    [[self window].rootViewController presentViewController:navigationController animated:YES completion:^{
-       
-        [webview setTitle:title];
-        [webview.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
-        
-    }];
+//    [PFPush handlePush:userInfo];
+//
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    NotificationViewController *webview = [storyboard instantiateViewControllerWithIdentifier:@"PushWebview"];
+//    
+//    UINavigationController *navigationController =
+//    [[UINavigationController alloc] initWithRootViewController:webview];
+//    
+//    NSString *url = [userInfo valueForKey:@"url"];
+//    NSString *title = [userInfo valueForKey:@"source"];
+//    
+//    [[self window].rootViewController presentViewController:navigationController animated:YES completion:^{
+//       
+//        [webview setTitle:title];
+//        [webview.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+//        
+//    }];
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
 }
@@ -111,7 +111,7 @@
 }
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
-    [self.adnowVC queryForNewsArticles];
+    //[self.adnowVC queryForNewsArticles];
     
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     if (currentInstallation.badge != 0) {

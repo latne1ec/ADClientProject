@@ -26,7 +26,6 @@ alpha:1.0]
 @implementation TourViewController
 
 
-
 -(void)viewDidLoad
 {
     

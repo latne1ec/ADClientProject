@@ -368,17 +368,11 @@
 				201703391B0E4429004E280E /* AppDelegate.h */,
 				2017033A1B0E4429004E280E /* AppDelegate.m */,
 				2017033F1B0E4429004E280E /* Main.storyboard */,
-				20790A771B58019B0045481A /* WelcomeViewController.h */,
-				20790A781B58019B0045481A /* WelcomeViewController.m */,
 				20497E5C1B6FAA02004A2950 /* Tour */,
-				20497E4C1B6BEE29004A2950 /* Navigation Bars */,
+				20A6B3F61EBBD77C0024AF1E /* Onboard */,
 				201703851B0E4839004E280E /* Home */,
-				201703841B0E4833004E280E /* News */,
-				20790A671B571FC70045481A /* Add Post */,
-				20790A541B571C8B0045481A /* Forum */,
-				201703891B0E4855004E280E /* Events */,
 				20EEEFCB1B155DED007EF98D /* Jobs */,
-				200FE97C1B1CAA3500B87640 /* Push Notifications */,
+				20A6B3F51EBBD7290024AF1E /* Unused */,
 				201703421B0E4429004E280E /* Images.xcassets */,
 				201703441B0E4429004E280E /* LaunchScreen.xib */,
 				201703351B0E4429004E280E /* Supporting Files */,
@@ -667,6 +661,28 @@
 				2090276A1B1D14DF003637F0 /* UIAlertView-Blocks.podspec */,
 			);
 			path = "UIAlertView-Blocks";
+			sourceTree = "<group>";
+		};
+		20A6B3F51EBBD7290024AF1E /* Unused */ = {
+			isa = PBXGroup;
+			children = (
+				200FE97C1B1CAA3500B87640 /* Push Notifications */,
+				201703891B0E4855004E280E /* Events */,
+				20790A541B571C8B0045481A /* Forum */,
+				20790A671B571FC70045481A /* Add Post */,
+				201703841B0E4833004E280E /* News */,
+				20497E4C1B6BEE29004A2950 /* Navigation Bars */,
+			);
+			name = Unused;
+			sourceTree = "<group>";
+		};
+		20A6B3F61EBBD77C0024AF1E /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				20790A771B58019B0045481A /* WelcomeViewController.h */,
+				20790A781B58019B0045481A /* WelcomeViewController.m */,
+			);
+			name = Onboard;
 			sourceTree = "<group>";
 		};
 		20EEEFCB1B155DED007EF98D /* Jobs */ = {

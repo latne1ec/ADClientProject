@@ -26,7 +26,11 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *jobPositionDetails;
 
+@property (weak, nonatomic) IBOutlet UILabel *jobPositionDetailsLabel;
+
 @property (weak, nonatomic) IBOutlet UITextView *jobRequirements;
+
+@property (weak, nonatomic) IBOutlet UILabel *jobRequiremnetsLabel;
 
 
 - (IBAction)shareButtonTapped:(id)sender;

@@ -980,35 +980,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="82" id="hxz-zU-Z2d" customClass="JobsTableCell">
-                                <rect key="frame" x="0.0" y="22" width="375" height="82"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="hxz-zU-Z2d" customClass="JobsTableCell">
+                                <rect key="frame" x="0.0" y="22" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hxz-zU-Z2d" id="RvR-wH-b2P">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="81.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3o-0Z-n8d">
-                                            <rect key="frame" x="17" y="10" width="287" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3o-0Z-n8d">
+                                            <rect key="frame" x="17" y="11" width="317" height="24"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.83999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Name - Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ7-Ni-Be1">
-                                            <rect key="frame" x="17" y="34" width="287" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name - Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ7-Ni-Be1">
+                                            <rect key="frame" x="17" y="39" width="317" height="20"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 days ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEd-JO-aAv">
-                                            <rect key="frame" x="17" y="55" width="287" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 days ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEd-JO-aAv">
+                                            <rect key="frame" x="17" y="67" width="287" height="14"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                             <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZQ7-Ni-Be1" firstAttribute="top" secondItem="F3o-0Z-n8d" secondAttribute="bottom" constant="4" id="7OO-bn-ZDh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="F3o-0Z-n8d" secondAttribute="trailing" id="8Ct-43-Zz1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yEd-JO-aAv" secondAttribute="trailing" constant="30" id="Mu8-HA-gA5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ZQ7-Ni-Be1" secondAttribute="trailing" id="XZE-1Y-ZdE"/>
+                                        <constraint firstItem="F3o-0Z-n8d" firstAttribute="leading" secondItem="RvR-wH-b2P" secondAttribute="leadingMargin" constant="9" id="dtA-fd-K9O"/>
+                                        <constraint firstItem="yEd-JO-aAv" firstAttribute="leading" secondItem="RvR-wH-b2P" secondAttribute="leadingMargin" constant="9" id="fzG-Pk-sp2"/>
+                                        <constraint firstItem="F3o-0Z-n8d" firstAttribute="top" secondItem="RvR-wH-b2P" secondAttribute="topMargin" constant="3" id="hCk-Sg-PSv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yEd-JO-aAv" secondAttribute="bottom" constant="0.5" id="oz2-kK-wEC"/>
+                                        <constraint firstItem="yEd-JO-aAv" firstAttribute="top" secondItem="ZQ7-Ni-Be1" secondAttribute="bottom" constant="8" id="pK4-Ry-x2h"/>
+                                        <constraint firstItem="ZQ7-Ni-Be1" firstAttribute="leading" secondItem="RvR-wH-b2P" secondAttribute="leadingMargin" constant="9" id="xIl-dI-8Qu"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="companyNameLocation" destination="ZQ7-Ni-Be1" id="KRq-bT-6cR"/>
@@ -1029,7 +1038,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WjZ-9d-NdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="2368"/>
+            <point key="canvasLocation" x="1340.5" y="2367.5"/>
         </scene>
         <!--Job Detail Table View Controller-->
         <scene sceneID="3mX-Pf-odt">
@@ -1076,11 +1085,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="286" id="Ks7-aQ-VoD">
-                                        <rect key="frame" x="0.0" y="106" width="375" height="286"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="106" id="Ks7-aQ-VoD">
+                                        <rect key="frame" x="0.0" y="106" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ks7-aQ-VoD" id="mDa-7i-sHh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="285.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Position Details:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpY-2B-z6Q">
@@ -1090,28 +1099,26 @@
                                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4X-KS-wk8">
-                                                    <rect key="frame" x="13" y="42" width="346" height="220"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <string key="text">The Maps App team is looking for a talented and passionate software engineer to contribute to the iOS Maps application, a cornerstone of Apple's mobile platform used by hundreds of millions worldwide. Along with excellent skills in object-oriented software design and programming, the successful candidate will have experience developing sophisticated user interfaces in Cocoa Touch. User interfaces in Cocoa Touch and Objective-C. User interfaces in Cocoa Touch and Swift. User interfaces in Cocoa Touch and Objective-C. User interfaces in Cocoa Touch and Swift, Java, Python and C++, C# etc. User interfaces in Cocoa Touch and Objective-C. User interfaces in Objective C. User interfaces in Cocoa Touch and Objective-C. User interfaces in Cocoa Touch and Swift, Java, Python and C++, C# etc. </string>
-                                                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7K-Pl-C33">
+                                                    <rect key="frame" x="19" y="51" width="337" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
+                                                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="v4X-KS-wk8" secondAttribute="bottom" constant="15.5" id="Qcd-Iu-zcg"/>
-                                                <constraint firstItem="v4X-KS-wk8" firstAttribute="top" secondItem="mDa-7i-sHh" secondAttribute="topMargin" constant="34" id="W6N-5K-qSv"/>
-                                                <constraint firstItem="v4X-KS-wk8" firstAttribute="leading" secondItem="mDa-7i-sHh" secondAttribute="leadingMargin" constant="5" id="g4x-Un-2P3"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="v4X-KS-wk8" secondAttribute="trailing" constant="8" id="ta8-kG-7Od"/>
+                                                <constraint firstItem="E7K-Pl-C33" firstAttribute="leading" secondItem="mDa-7i-sHh" secondAttribute="leadingMargin" constant="11" id="dBf-BW-yTb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="E7K-Pl-C33" secondAttribute="bottom" constant="18.5" id="eyG-tB-Eci"/>
+                                                <constraint firstItem="E7K-Pl-C33" firstAttribute="top" secondItem="mDa-7i-sHh" secondAttribute="topMargin" constant="43" id="hBX-LT-Uvd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="E7K-Pl-C33" secondAttribute="trailing" constant="11" id="qlD-b4-d7Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="420" id="pxE-Na-ZKc">
-                                        <rect key="frame" x="0.0" y="392" width="375" height="420"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="106" id="pxE-Na-ZKc">
+                                        <rect key="frame" x="0.0" y="212" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pxE-Na-ZKc" id="yXS-Aq-QlS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="419.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Requirements:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-MH-WBq">
@@ -1121,26 +1128,18 @@
                                                     <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVw-9X-3jv">
-                                                    <rect key="frame" x="12" y="48" width="347" height="380"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="tintColor" red="1" green="0.34719722679999998" blue="0.1066646164" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <string key="text">Strong object-oriented programming and design skills.
-Experience at the application and user interface level.
-Cocoa or Cocoa-Touch development experience.
-Passion for product quality and attention to detail.
-Excellent communication skills. </string>
-                                                    <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2I-Kf-hnI">
+                                                    <rect key="frame" x="19" y="55" width="337" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                                                </textView>
+                                                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="GVw-9X-3jv" secondAttribute="bottom" constant="-16.5" id="DKK-0T-c5y"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="GVw-9X-3jv" secondAttribute="trailing" constant="8" id="Jg8-ot-8Ne"/>
-                                                <constraint firstItem="GVw-9X-3jv" firstAttribute="leading" secondItem="yXS-Aq-QlS" secondAttribute="leadingMargin" constant="4" id="Lyl-CH-nZt"/>
-                                                <constraint firstItem="GVw-9X-3jv" firstAttribute="top" secondItem="yXS-Aq-QlS" secondAttribute="topMargin" constant="40" id="VjA-mV-DMj"/>
+                                                <constraint firstItem="t2I-Kf-hnI" firstAttribute="leading" secondItem="yXS-Aq-QlS" secondAttribute="leadingMargin" constant="11" id="EvU-lZ-Drp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="t2I-Kf-hnI" secondAttribute="trailing" constant="11" id="N58-Zy-NVS"/>
+                                                <constraint firstItem="t2I-Kf-hnI" firstAttribute="top" secondItem="yXS-Aq-QlS" secondAttribute="topMargin" constant="47" id="QhL-LW-0fX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="t2I-Kf-hnI" secondAttribute="bottom" constant="14.5" id="Xzx-Mv-67m"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1167,8 +1166,8 @@ Excellent communication skills. </string>
                         <outlet property="companyNameLabel" destination="prb-WW-tB8" id="3Z1-wB-Q5v"/>
                         <outlet property="jobLink" destination="tP1-q7-XrI" id="tlH-vj-FR2"/>
                         <outlet property="jobLocationLabel" destination="z4y-Hm-Mbl" id="IcM-GG-oyq"/>
-                        <outlet property="jobPositionDetails" destination="v4X-KS-wk8" id="hpP-pE-MkJ"/>
-                        <outlet property="jobRequirements" destination="GVw-9X-3jv" id="DPe-cf-7jG"/>
+                        <outlet property="jobPositionDetailsLabel" destination="E7K-Pl-C33" id="due-GN-wzJ"/>
+                        <outlet property="jobRequiremnetsLabel" destination="t2I-Kf-hnI" id="WgW-fb-IFe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uty-xY-R1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1179,7 +1178,7 @@ Excellent communication skills. </string>
         <scene sceneID="hno-y1-lak">
             <objects>
                 <tableViewController id="nfZ-gv-Vbg" customClass="JobPostingsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="146" sectionHeaderHeight="22" sectionFooterHeight="22" id="du4-vm-0IF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="du4-vm-0IF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1268,35 +1267,44 @@ Excellent communication skills. </string>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="82" id="MFA-rb-SSy" customClass="JobsTableCell">
-                                <rect key="frame" x="0.0" y="188" width="375" height="82"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="MFA-rb-SSy" customClass="JobsTableCell">
+                                <rect key="frame" x="0.0" y="188" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MFA-rb-SSy" id="oe6-M2-Ytm">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="81.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-oy-9xB">
-                                            <rect key="frame" x="17" y="10" width="287" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-oy-9xB">
+                                            <rect key="frame" x="17" y="11" width="317" height="24"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                            <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.83999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company Name - Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKu-cX-ron">
-                                            <rect key="frame" x="17" y="34" width="287" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name - Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKu-cX-ron">
+                                            <rect key="frame" x="17" y="39" width="317" height="20"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 days ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hb-25-2lq">
-                                            <rect key="frame" x="17" y="55" width="287" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 days ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hb-25-2lq">
+                                            <rect key="frame" x="17" y="67" width="287" height="14"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                             <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LKu-cX-ron" firstAttribute="leading" secondItem="oe6-M2-Ytm" secondAttribute="leadingMargin" constant="9" id="OUT-p0-ho4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6hb-25-2lq" secondAttribute="trailing" constant="30" id="PR8-7b-LU3"/>
+                                        <constraint firstItem="3CK-oy-9xB" firstAttribute="leading" secondItem="oe6-M2-Ytm" secondAttribute="leadingMargin" constant="9" id="SGn-e5-s3p"/>
+                                        <constraint firstItem="LKu-cX-ron" firstAttribute="top" secondItem="3CK-oy-9xB" secondAttribute="bottom" constant="4" id="Sgw-gQ-zGq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LKu-cX-ron" secondAttribute="trailing" id="UNY-hf-o96"/>
+                                        <constraint firstItem="6hb-25-2lq" firstAttribute="top" secondItem="LKu-cX-ron" secondAttribute="bottom" constant="8" id="d9g-NW-OQZ"/>
+                                        <constraint firstItem="3CK-oy-9xB" firstAttribute="top" secondItem="oe6-M2-Ytm" secondAttribute="topMargin" constant="3" id="jTF-My-dyP"/>
+                                        <constraint firstItem="6hb-25-2lq" firstAttribute="leading" secondItem="oe6-M2-Ytm" secondAttribute="leadingMargin" constant="9" id="oML-Up-LTZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3CK-oy-9xB" secondAttribute="trailing" id="rQ1-sU-rc7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6hb-25-2lq" secondAttribute="bottom" constant="1" id="ttA-OW-e3w"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="companyNameLocation" destination="LKu-cX-ron" id="EUy-2R-LV8"/>
@@ -1323,7 +1331,7 @@ Excellent communication skills. </string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Suh-hv-7zI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919" y="1609"/>
+            <point key="canvasLocation" x="918.5" y="1608.5"/>
         </scene>
         <!--Jobs-->
         <scene sceneID="vUb-fN-TPO">

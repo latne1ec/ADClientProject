@@ -30,18 +30,11 @@
    
     if (self.filterQuery == nil) {
         [self queryForJobListings];
-    }
-    else {
-        
+    } else {
         if ([self.positionType isEqualToString:@"All"]) {
-            NSLog(@"All");
             [self queryForAllWithFilters];
-        }
-        
-        else{
-        
-        [self queryWithFilters];
-            
+        } else {
+            [self queryWithFilters];
         }
     }
 }
@@ -86,10 +79,19 @@
     return cell;
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    return 82;
+//    
+//}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 82;
-    
+    return UITableViewAutomaticDimension;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
 }
 
 -(void)queryForJobListings {
@@ -101,7 +103,13 @@
         [query whereKey:@"jobTitle" matchesRegex:self.jobTitle modifiers:@"i"];
     }
     if (self.jobLocation != nil) {
-        [query whereKey:@"jobLocation" matchesRegex:self.jobLocation modifiers:@"i"];
+        NSLog(@"Location: %@", self.jobLocation);
+        NSString *lowerCaseJobLocation = [self.jobLocation lowercaseString];
+        NSString *trimmedString = [lowerCaseJobLocation stringByTrimmingCharactersInSet:
+                                   [NSCharacterSet whitespaceCharacterSet]];
+        
+        //[query whereKey:@"jobLocationTags" matchesRegex:self.jobLocation modifiers:@"i"];
+        [query whereKey:@"jobLocationTagsArray" equalTo:trimmedString];
     }
     [query orderByAscending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -127,6 +135,7 @@
         [query whereKey:@"jobTitle" matchesRegex:self.jobTitle modifiers:@"i"];
     }
     if (self.jobLocation != nil) {
+        NSLog(@"Location: %@", self.jobLocation);
         [query whereKey:@"jobLocation" matchesRegex:self.jobLocation modifiers:@"i"];
     }
     if (self.positionType != nil) {
@@ -164,6 +173,7 @@
         [query whereKey:@"jobTitle" matchesRegex:self.jobTitle modifiers:@"i"];
     }
     if (self.jobLocation != nil) {
+        NSLog(@"Location: %@", self.jobLocation);
         [query whereKey:@"jobLocation" matchesRegex:self.jobLocation modifiers:@"i"];
     }
     if (self.employmentType != nil) {

@@ -74,9 +74,6 @@
     
 }
 
-
-
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -96,29 +93,20 @@
         return nil;
     }
     if (section == 1) {
-        
         return @"Most Recent";
     }
     
     return nil;
 }
 
-
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
     
     if (section == 0) {
-        
         return 0;
-    }
-    else {
+    } else {
         return self.jobs.count;
     }
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -141,11 +129,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 82;
-    
+    return UITableViewAutomaticDimension;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
 
 -(void)queryForJobs {
     
@@ -155,20 +144,16 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         if (error) {
-            
             [ProgressHUD showError:@"Network Error"];
             
-        }
-        else {
+        } else {
             [ProgressHUD dismiss];
             self.jobs = objects;
             [self.tableView reloadData];
         }
-        
         if ([self.refreshControl isRefreshing]) {
             [self.refreshControl endRefreshing];
         }
-        
     }];
     
 }
@@ -185,8 +170,6 @@
     return YES;
 }
 
-
-
 - (IBAction)moreFiltersTapped:(id)sender {
     
     FiltersTableViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Filters"];
@@ -194,7 +177,7 @@
     [[UINavigationController alloc] initWithRootViewController:destViewController];
     UIBarButtonItem *newBackButton =
     [[UIBarButtonItem alloc] initWithTitle:@""
-                                     style:UIBarButtonItemStyleBordered
+                                     style:UIBarButtonItemStylePlain
                                     target:nil
                                     action:nil];
     [[navigationController navigationItem] setBackBarButtonItem:newBackButton];
@@ -216,7 +199,6 @@
 
     [self.navigationController pushViewController:destViewController animated:YES];
     
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -237,7 +219,6 @@
         
         [segue.destinationViewController setTitle:job.jobTitle];
         destViewController.hidesBottomBarWhenPushed = YES;
-        
     }
 }
 

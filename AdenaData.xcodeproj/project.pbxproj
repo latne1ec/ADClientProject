@@ -72,6 +72,7 @@
 		20497E671B6FE032004A2950 /* tour1.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497E651B6FE032004A2950 /* tour1.png */; };
 		20497E681B6FE032004A2950 /* tour2.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497E661B6FE032004A2950 /* tour2.png */; };
 		20497E6A1B6FE0EC004A2950 /* tour3.png in Resources */ = {isa = PBXBuildFile; fileRef = 20497E691B6FE0EC004A2950 /* tour3.png */; };
+		206A5CEB1EBC004100549196 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206A5CEA1EBC004100549196 /* splash@2x.png */; };
 		207804EA1E32B75A00F7AFE9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207804E91E32B75A00F7AFE9 /* Default-568h@2x.png */; };
 		20790A531B571C870045481A /* ForumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20790A521B571C870045481A /* ForumTableViewController.m */; };
 		20790A571B571CB50045481A /* ForumTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20790A561B571CB50045481A /* ForumTableCell.m */; };
@@ -224,6 +225,7 @@
 		20497E661B6FE032004A2950 /* tour2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tour2.png; sourceTree = "<group>"; };
 		20497E691B6FE0EC004A2950 /* tour3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tour3.png; sourceTree = "<group>"; };
 		204E7F611E32D4F90065A468 /* AdenaData.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdenaData.entitlements; sourceTree = "<group>"; };
+		206A5CEA1EBC004100549196 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
 		207804E91E32B75A00F7AFE9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		20790A511B571C870045481A /* ForumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumTableViewController.h; sourceTree = "<group>"; };
 		20790A521B571C870045481A /* ForumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumTableViewController.m; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 		201703CE1B0E6542004E280E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				206A5CEA1EBC004100549196 /* splash@2x.png */,
 				20C4E0201E1F08BE0012ECC3 /* adBkgAug@2x.png */,
 				20F5A2FD1B86AE6300FC7BA5 /* adLink@2x.png */,
 				20F5A2FE1B86AE6300FC7BA5 /* facebookIcon@2x.png */,
@@ -845,6 +848,7 @@
 				20790A761B58013E0045481A /* adBkg2@2x.png in Resources */,
 				201703D01B0E654E004E280E /* orangeBar@2x.png in Resources */,
 				203A1B791B16061700E0D132 /* cancelWhite@2x.png in Resources */,
+				206A5CEB1EBC004100549196 /* splash@2x.png in Resources */,
 				2090276B1B1D14DF003637F0 /* LICENSE in Resources */,
 				20790A6F1B5749F40045481A /* addPostTwo@2x.png in Resources */,
 				201703461B0E4429004E280E /* LaunchScreen.xib in Resources */,
@@ -1139,7 +1143,6 @@
 			baseConfigurationReference = DD6A8A3A9727E46B4AB39DFC /* Pods-AdenaData.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = AdenaData/AdenaData.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1149,7 +1152,7 @@
 					"$(PROJECT_DIR)/AdenaData",
 				);
 				INFOPLIST_FILE = AdenaData/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1161,7 +1164,6 @@
 			baseConfigurationReference = 334294167D645AEE4852970C /* Pods-AdenaData.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = AdenaData/AdenaData.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Adena Data, LLC (H875PU7D8W)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1171,7 +1173,7 @@
 					"$(PROJECT_DIR)/AdenaData",
 				);
 				INFOPLIST_FILE = AdenaData/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

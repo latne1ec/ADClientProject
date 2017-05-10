@@ -37,7 +37,7 @@ alpha:1.0]
     [self.view addSubview:whiteSquare];
     
     
-    _pages = 4;
+    _pages = 2;
     _pagedTour = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     _pagedTour.contentSize = CGSizeMake(_pagedTour.frame.size.width*_pages, _pagedTour.frame.size.height);
     _pagedTour.showsHorizontalScrollIndicator = NO;
@@ -63,7 +63,7 @@ alpha:1.0]
     
     UIView *page1 = [[UIView alloc] initWithFrame:self.view.bounds];
     page1.backgroundColor = [UIColor clearColor];
-    [_pagedTour addSubview:page1];
+    //[_pagedTour addSubview:page1];
     
     float maxWidth = _w;
     float scaleTo = maxWidth/[image1 size].width;
@@ -84,7 +84,7 @@ alpha:1.0]
     
     UIView *page2 = [[UIView alloc] initWithFrame:CGRectMake(_w, 0, _w, _h)];
     page2.backgroundColor = [UIColor clearColor];
-    [_pagedTour addSubview:page2];
+    //[_pagedTour addSubview:page2];
     
     scaleTo = maxWidth/[image2 size].width;
     
@@ -105,7 +105,7 @@ alpha:1.0]
     page2Message.textAlignment = NSTextAlignmentCenter;
     [page2 addSubview:page2Message];
     
-    UIView *page3 = [[UIView alloc] initWithFrame:CGRectMake(_w*2, 0, _w, _h)];
+    UIView *page3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _w, _h)]; //w*2
     page3.backgroundColor = [UIColor clearColor];
     [_pagedTour addSubview:page3];
     
@@ -128,7 +128,7 @@ alpha:1.0]
     page3Message.textAlignment = NSTextAlignmentCenter;
     [page3 addSubview:page3Message];
     
-    UIView *page4 = [[UIView alloc] initWithFrame:CGRectMake(_w*3, 0, _w, _h)];
+    UIView *page4 = [[UIView alloc] initWithFrame:CGRectMake(_w, 0, _w, _h)]; // w*3
     page4.backgroundColor = [UIColor clearColor];
     //page4.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"adBkgAug.png"]];
     

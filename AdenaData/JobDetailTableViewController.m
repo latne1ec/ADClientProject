@@ -23,20 +23,15 @@
     
     self.tableView.tableFooterView = [UIView new];
     
+    self.tableView.estimatedRowHeight = 105.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+
     self.jobLink.text = job.jobLink;
     self.companyNameLabel.text = job.jobEmployer;
     self.jobLocationLabel.text = job.jobLocation;
-    self.jobPositionDetails.text = job.positionDetails;
-    self.jobRequirements.text = job.requirements;
+    self.jobPositionDetailsLabel.text = job.positionDetails;
+    self.jobRequiremnetsLabel.text = job.requirements;
     
-    self.tableView.estimatedRowHeight = 44.0;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
-}
-
-- (void)viewDidLayoutSubviews {
-    [self.jobPositionDetails setContentOffset:CGPointZero animated:NO];
-    [self.jobRequirements setContentOffset:CGPointZero animated:NO];
 }
 
 #pragma mark - Table view data source
@@ -51,11 +46,29 @@
     return 3;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if(indexPath.row == 1) {
+        return UITableViewAutomaticDimension;
+    } else if (indexPath.row == 2) {
+        return UITableViewAutomaticDimension;
+    }
+    
+    return 105;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
     if (indexPath.row == 0) return cellOne;
-    if (indexPath.row == 1) return cellTwo;
+    if (indexPath.row == 1) {
+        [cellTwo updateConstraintsIfNeeded];
+        return cellTwo;
+    }
     if (indexPath.row == 2) {
         cellThree.separatorInset = UIEdgeInsetsMake(0.f, 10000.0f, 0.f, 0.0f);
     }
